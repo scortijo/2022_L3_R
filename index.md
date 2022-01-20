@@ -9,7 +9,7 @@
 
 ## Description
 
-Ce cours va vous apprendre comment exporer des données et réaliser des graphiques dans **R**. 
+Ce cours va vous apprendre comment explorer des données et réaliser des graphiques dans **R**. 
 Les différentes séances sont (avec accès au cours):
 
 
@@ -36,7 +36,7 @@ Les différentes séances sont (avec accès au cours):
 
 <br>
 
-### Séance 3 (xxx): Ajouter des résultats de tests statistiquues à des graphiques et réorganiser des données
+### Séance 3 (xxx): Ajouter des résultats de tests statistiques à des graphiques et réorganiser des données
 
 [Partie 1 - Matériel ajouter des résultats de tests statistiquues à des graphiques - suite]()  
 
@@ -93,7 +93,7 @@ Les différentes séances sont (avec accès au cours):
 <br>
 
 ## Si vous voulez utiliser R chez vous: 
-Il est recommandé d'utiliser R régulièrement pour bien comprendre et aprendre. Pour cela le mieux est d'installer **R** et **R studio** sur votre ordinateur:
+Il est recommandé d'utiliser R régulièrement pour bien comprendre et apprendre. Pour cela le mieux est d'installer **R** et **R studio** sur votre ordinateur:
 
 [Installer R](https://cran.biotools.fr/)
 
@@ -103,7 +103,7 @@ Dans chaque cas, téléchargez la version pour votre système opérateur (Mac, W
 
 Vous devez aussi avoir les packages `tidyverse`, `visdat` et `plotly` installés. 
 Pour cela:
-1. Assurez vous d'avoir acces à internet
+1. Assurez vous d'avoir accès à internet
 2. Ouvrez Rstudio
 3. Dans la "console" (panel en haut à gauche), tapez `install.packages(c("tidyverse","visdat", "plotly"))` puis enter
 4. Assurez vous que l'installation a fonctionné en tapant `library(tidyverse)` (puis faites la même chose avec `visdat` et `plotly`)
