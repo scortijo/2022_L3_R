@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 <br>
 
-[Retour à la page d'accueil](https://scortijo.github.io/2021_L3_R/)
+[Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
 
 <br>
 
@@ -25,8 +25,76 @@ expt1 <- read_tsv("../data/burghardt_et_al_2015_expt1.txt")
 
 
 
-
 > **Exercice 1:**
+> Utilisez `%>%` pour faire la suite de sélections suivantes sur`expt1`:
+>
+> - Gardez les plantes qui _ne sont pas_ du background Ler, et qui ont été traitées avec la température fluctuante. 
+> - Ne gardez que les colonnes qui contiennent le génotype, la longueur de "blade" et des information sur le "bolting" (aide: utilisez `contains()`)
+
+
+
+
+```{r}
+
+filter(expt1,  background!="Ler" & fluctuation=="Var") %>% 
+  select(genotype, blade.length.mm, contains("bolt"))
+
+```
+
+
+<br>
+
+******
+
+
+
+> **Exercice 2:**
+> Faite un violon plot du temps de floraison pour les différents génotypes, mais uniquement pour les plantes ayant poussées en jours court (8h de lumière).
+>
+> Aide: Utilisez `filter()` pour sélectionner les données et ensuite un pipe (`%>%`) pour utiliser l'output pour le graphique.
+
+
+
+
+```{r}
+
+filter(expt1,  day.length==8) %>% 
+  ggplot((aes( x=genotype, y=days.to.flower))) +
+  geom_violin() +
+  ggtitle("plantes ayant poussées en jours court (8h de lumière)")
+
+```
+
+
+> **BONUS**
+>
+> Représentez, uniquement pour les plantes qui contiennent le mot "Col" dans le background, et qui ont poussée à 22°C, un box plot de _days.to.bolt_ en fonction du _day.length_, coloré en fonction de la _fluctuation_. Séparez les graphiques pour avoir une facet par _génotype_. Utilisez un thème de type _theme_bw_.
+>
+>
+> Interprétez le résultat: Est-ce que le temps de floraison de certains génotypes est affecté par la fluctuation de température. Si oui lesquels?
+
+
+
+```{r}
+
+filter(expt1, grepl("Col", background) & temperature == 22) %>% 
+  ggplot(aes(x=day.length, y=days.to.bolt, color=fluctuation)) +
+  geom_boxplot()+
+  facet_grid(.~genotype) +
+  theme_bw()
+
+
+```
+
+
+Interprétation du résultat: On peut voir un effet très marqué de la fluctuation de température pour certains génotypes, avec un temps de floraison plus précoce quand la température varie par rapport à quand elle ne varie pas.
+Cet effet est très marqué pour les génotypes Col FRI, prmt5 FRI et vin3-4 FRI.
+
+<br>
+
+******
+
+> **Exercice 3:**
 >
 > Créez une nouvelle colonne (blade.ratio) avec le ratio de `blade.length.mm` et `total.leaf.length.mm`
 >
@@ -45,7 +113,7 @@ mutate(expt1, blade.ratio=blade.length.mm/total.leaf.length.mm)
 ******
 
 
-> **Exercice 2:** 
+> **Exercice 4:** 
 > 
 > Reproduisez cette figure de [Burghard et al 2015](https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.13799)
 > 
@@ -114,54 +182,4 @@ mutate(expt1, blade.ratio=blade.length.mm/total.leaf.length.mm) %>%
 ******
 
 
-
-> **Exercice 3:** 
-> 
-> 1. Utilisez la fonction `gather()` pour restructurer le tableau afin de faire un boxplot de `blade.length.mm` et `total.leaf.length.mm`, coloré par  `fluctuation`.
-
-> 2. Ajoutez aux boxplots des encoches indiquant l'étendue de l'intervalle de confiance à 95% de la médiane (voir l'option `notch` dans `geom_boxplot`). Si les encoches sont étroite, il y a peu d'incertitude sur la médiane, si les encoches sont large, il y a une forte incertitude sur la médiane. Si les encoches de boxplots que nous comparons se chevauchent, alors nous ne pouvons pas conclure à une différence de médiane entre les médiane des deux groupes.  
-
-
-
-
-
-```{r}
-
-gather(expt1, "trait", "length.mm", blade.length.mm, total.leaf.length.mm) %>% 
-  ggplot(aes(x=trait, y=length.mm, color=fluctuation)) +
-  geom_boxplot(notch=TRUE)
-
-```
-
-<br>
-
-> 3. Interprétez le graphique: Y a t'il un effet de la fluctuation de température sur la longueur de blade ou de la feuille? Pourquoi?
-
-<br>
-Sur le graphique nous observons que les valeurs des boxplots pour les plantes ayant poussé en condition de température variable sont plus élevée que pour les plantes ayant pousser en condition de température stable. Pour les longueurs de blade et de la feuille, la médiane est plus élevée en condition de température variable, et les encoches sont petites, indiquant une forte certitude de la valeur de médiane, et ne se chevauchent pas entre les deux conditions indiquant une différence de médiane entre les deux conditions. 
-Ce graphique montre que les plantes poussant en condition de température variable ont une longueur de blade et une longueur totale de la feuille plus grande que en condition de température constante.
-
-<br>
-
-> **BONUS**
-> Optimisez le graphique obtenu en jouant sur le thème, les couleurs utilisée (visibles par des daltoniens), le titre et la valeur des axes et de la légende, de manière à avoir un graphique similaire au graphique suivant:
->
-
-
-```{r}
-
-gather(expt1, "trait", "length.mm", blade.length.mm, total.leaf.length.mm) %>% 
-  ggplot(aes(x=trait, y=length.mm, fill=fluctuation)) +
-  geom_boxplot(notch = TRUE) +
-  scale_fill_brewer(palette = "Set2", labels = c("Con"="Constant", "Var"="Variable"), 
-                    name="Fluctuation type") +
-  theme_bw() +
-  scale_x_discrete(name="",labels=c("blade.length.mm"="Blade","total.leaf.length.mm"="Total leaf")) +
-  ylab("Length (mm)")
-
-```
-
-<br>
-
-******
 

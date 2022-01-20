@@ -88,7 +88,7 @@ expt1 %>%
 ```
 
 
-> **Exercice 3:**
+> **Exercice 1:**
 > Utilisez `%>%` pour faire la suite de sélections suivantes sur`expt1`:
 >
 > - Gardez les plantes qui _ne sont pas_ du background Ler, et qui ont été traitées avec la température fluctuante. 
@@ -111,7 +111,7 @@ expt1 %>%
   geom_boxplot()
 ```
 
-> **Exercice 4:**
+> **Exercice 2:**
 > Faite un violon plot du temps de floraison pour les différents génotypes, mais uniquement pour les plantes ayant poussées en jours court (8h de lumière).
 >
 > Aide: Utilisez `filter()` pour sélectionner les données et ensuite un pipe (`%>%`) pour utiliser l'output pour le graphique.
@@ -167,7 +167,7 @@ colnames(expt1.cm)
 **Attention!!** Si vous utilisez le nom d'une colonne déjà existante, vous allez la modifier et non créer une nouvelle colonne.
 
 
-> **Exercice 1:**
+> **Exercice 3:**
 >
 > Créez une nouvelle colonne (blade.ratio) avec le ratio de `blade.length.mm` et `total.leaf.length.mm`
 >
@@ -209,7 +209,7 @@ colnames(expt1.separated)
 -------
 
 
-> **Exercice 2:** 
+> **Exercice 4:** 
 > 
 > Reproduisez cette figure de [Burghard et al 2015](https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.13799)
 > 
