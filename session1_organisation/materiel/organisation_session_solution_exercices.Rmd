@@ -45,7 +45,7 @@ date3_geneXY_15c25c_col0_ler1_rep3.txt
 (en remplaçant date1, date2 et date3 par la vrai date de l'expérience)
 
 
-Ou peut être même que vous avez tous vos réplicat ensemble et vous avez un fichier par date:
+Ou peut être même que vous avez tous vos réplicats ensemble et vous avez un fichier par date:
 
 date1_geneXY_15c25c_col0_ler1_rep1_2_3.txt
 date2_geneXY_15c25c_col0_ler1_rep1_2_3.txt

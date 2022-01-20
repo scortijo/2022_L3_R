@@ -228,14 +228,14 @@ La plupart d'entre nous utilisent à un moment donné ou à un autre, un tableur
 
 - Pour que ce soit compatible avec R, utiliser `_` plutôt que des espaces entre les mots.
 
-- *Attention aux dates!* Cela peut causer des problèmes de format d'un tableaur à un autre. Le mieux est de garder le jour, le mois et l'années commes des variables (colonnes) séparées
+- *Attention aux dates!* Cela peut causer des problèmes de format d'un tableur à un autre. Le mieux est de garder le jour, le mois et l’année comme des variables (colonnes) séparées
     
 
 
 
 ## Exporter les données
 
-Bien que excel est souvent utilisé, son format de fichier par défault n'est malheureusement pas compatible avec d'autres programmes, y compris ``R``. Pour cela le mieux est d'enregistrer les données tabulaires dans un format texte.  
+Bien que excel est souvent utilisé, son format de fichier par défaut n'est malheureusement pas compatible avec d'autres programmes, y compris ``R``. Pour cela le mieux est d'enregistrer les données tabulaires dans un format texte.  
 
 Les deux formats les plus utilisés sont:
 
@@ -245,7 +245,7 @@ _CSV_ (séparateur: virgule (UK, US) ou point-virgule (EU))
 _TXT_ (séparateur: tabulation)
 
 
-**Attention**: les documents avec un format _CSV_ qui ont un séparateur virgule ou un séparetur point-virgule ne sont pas la même chose. Les confondre peut poser des problèmes lors de l'import des données dans ``R``. C'est pourquoi nous recommendons de sauver les données en format _TXT_ (séparateur: tabulation) pour ensuite pouvoir les importer dans  ``R`.
+**Attention**: les documents avec un format _CSV_ qui ont un séparateur virgule ou un séparateur point-virgule ne sont pas la même chose. Les confondre peut poser des problèmes lors de l'import des données dans ``R``. C'est pourquoi nous recommandons de sauver les données en format _TXT_ (séparateur: tabulation) pour ensuite pouvoir les importer dans  ``R`.
 
 Pour cela, dans excel, choisissez "Enregistrez sous" et ensuite sélectionnez le format _TXT_ (séparateur: tabulation) .
 
