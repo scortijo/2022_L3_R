@@ -64,11 +64,12 @@ Les différentes séances sont (avec accès au cours):
 
 [Solution des exercices](session5_rmarkdown/materiel/amelioration_graphiques_solution_exercices.html)
 
+<br>
 
 ### Séance 6 (xxx): Exam blanc, Correction de l'exam blanc et trucs et astuces
 
 
-
+<br>
 
 ### Séance 7 (xxx): Exam
 
