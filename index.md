@@ -1,6 +1,6 @@
-**Où:** Salle TD25.info
+**Où:** xxx
 
-**Quand:** Du 14 Octobre 2021 au 9 Décembre 2021
+**Quand:** Du xxx 2022 au xxx 2022
 
 **Instructeurs:** 
 [Sandra Cortijo](mailto:sandra.cortijo@cnrs.fr), 
@@ -13,7 +13,7 @@ Ce cours va vous apprendre comment exporer des données et réaliser des graphiq
 Les différentes séances sont (avec accès au cours):
 
 
-### Séance 1 (14/10/2021 8h-11h15): Organisation des données et intro à **R**
+### Séance 1 (xxx): Organisation des données et intro à **R**
 
 [Matériel organisation des données](session1_organisation/materiel/organisation_session.html)  
 
@@ -25,76 +25,72 @@ Les différentes séances sont (avec accès au cours):
 
 [Solution des exercices](session1_organisation/materiel/intro_R_solution_exercices)
 
+<br>
 
-### Séance 2 (21/10/2021 8h-11h15): Réaliser des graphiques
+### Séance 2 (xxx): Réaliser des graphiques
 
 [Matériel réaliser des graphiques](session2_ggplot/materiel/ggplot_session.html)  
 
 
 [Solution des exercices](session2_ggplot/materiel/ggplot_exercise_solutions.html)
 
+<br>
 
-### Séance 3 (28/10/2021 8h-11h15): Réaliser des graphiques et réorganiser des données
+### Séance 3 (xxx): Ajouter des résultats de tests statistiquues à des graphiques et réorganiser des données
 
-[Partie 1 - Matériel réaliser des graphiques - suite](session3_plots_reorganisation/materiel/ggplot_suite.html)  
+[Partie 1 - Matériel ajouter des résultats de tests statistiquues à des graphiques - suite]()  
 
 <br>
 
-[Partie 2 - Réorganisation de données](session3_plots_reorganisation/materiel/reorganisation_donnees.html)  
+[Partie 2 - Matériel réorganisation de données](session3_plots_reorganisation/materiel/reorganisation_donnees.html)  
 
 [Solution des exercices](session3_plots_reorganisation/materiel/reorganisation_donnees_solution_exercices.html)
 
+<br>
 
+### Séance 4 (18/11/2021 8h-11h15): Réorganisation de données - suite
 
-### Séance 4 (18/11/2021 8h-11h15): Réorganisation avancée de données
-
-[Réorganisation de données avancée](session4_reorganisation_avancee/materiel/reorganisation_avancee.html)  
+[Matériel réorganisation de données - suite](session4_reorganisation_avancee/materiel/reorganisation_avancee.html)  
 
 [Solution des exercices](session4_reorganisation_avancee/materiel/reorganisation_avancee_solution_exercices.html)
 
 
-
-
-### Séance 5 (25/11/2021 8h-11h15): Créer un Rmarkdown et mise en pratique
-
-[Partie 1 - Créer un Rmarkdown](session5_rmarkdown/materiel/rmarkdown_session.html) 
-
-[Solution des exercices](session5_rmarkdown/materiel/Solution.html)
-
 <br>
 
-[Partie 2 - Mise en pratique, ajouter des informations sur des graphiques](session5_rmarkdown/materiel/amelioration_graphiques.html) 
+### Séance 5 (25/11/2021 8h-11h15): Réorganisation avancée de données
+
+
+[Matériel réorganisation de données avancée](session5_rmarkdown/materiel/amelioration_graphiques.html) 
 
 [Solution des exercices](session5_rmarkdown/materiel/amelioration_graphiques_solution_exercices.html)
 
 
-### Séance 6 (02/12/2021 8h-11h15): Exam blanc, Correction de l'exam blanc et trucs et astuces
-
-[Ennoncé de l'exam blanc](session6_exam_blanc/materiel/exam_blanc.html)
-
-[Correction de l'exam blanc](session6_exam_blanc/materiel/exam_blanc_bis.html)
-
-[Astuces pour chercher de l'aide en ligne](session6_exam_blanc/materiel/astuces.html)
+### Séance 6 (xxx): Exam blanc, Correction de l'exam blanc et trucs et astuces
 
 
-### Séance 7 (09/12/2021 9h45-11h15): Exam
 
 
-[Ennoncé de l'exam](examen_terminal/Enonce_exam.html)
-
-[Correction de l'exam en format html](examen_terminal/Solution_Exam_L3.html)
-
-[Correction de l'exam en format script R](examen_terminal/Solution_script_exam.R)
+### Séance 7 (xxx): Exam
 
 
+
+
+### BONUS
+
+[Créer un Rmarkdown](session5_rmarkdown/materiel/rmarkdown_session.html) 
+
+[Solution des exercices - Créer un Rmarkdown](session5_rmarkdown/materiel/Solution.html)
+
+
+<br>
 
 ### Liens  utiles
 
 
 [Antisèches](https://www.rstudio.com/resources/cheatsheets/)
 
-[Inclure des résultats de tests statistiques sur un graphique](https://scortijo.github.io/2021_M2_R/session2/materiel/session2.html)
 
+<br>
 
 ## Si vous voulez utiliser R chez vous: 
 Il est recommandé d'utiliser R régulièrement pour bien comprendre et aprendre. Pour cela le mieux est d'installer **R** et **R studio** sur votre ordinateur:
