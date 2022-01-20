@@ -6,7 +6,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# [Retour à la page d'accueil](https://scortijo.github.io/ggplot_course/)
+# [Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
 
 ## Formation ggplot2 - solution des exercices
 

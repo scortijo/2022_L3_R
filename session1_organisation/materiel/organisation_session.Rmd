@@ -12,7 +12,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 <br>
-[Retour à la page d'accueil](https://scortijo.github.io/2021_L3_R/)
+[Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
 <br>
 
 ## Organisation des dossiers, fichiers et données
@@ -274,7 +274,7 @@ Pour cela, dans excel, choisissez "Enregistrez sous" et ensuite sélectionnez le
 
 ******
 
-[Retour à la page d'accueil](https://scortijo.github.io/2021_L3_R/)
+[Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
 
 <br>
 

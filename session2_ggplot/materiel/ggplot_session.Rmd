@@ -12,7 +12,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-[Retour à la page d'accueil](https://scortijo.github.io/2021_L3_R/)
+[Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
 
 # Visualisation de données avec ggplot2
 
@@ -565,7 +565,8 @@ pour faire des graphiques "ridge"
 # Ressources et liens utiles
 
 - [Gallerie de graphiques pouvant être réalisés avec ggplot2](https://www.r-graph-gallery.com/)
-- [Antisèche pour ggplot2](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+
+- [Antisèche pour ggplot2](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf)
 
 
 
@@ -589,6 +590,6 @@ install.packages("tidyverse")
 
 -------
 
-[Retour à la page d'accueil](https://scortijo.github.io/2021_L3_R/)
+[Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
 
 
