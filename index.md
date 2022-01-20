@@ -78,9 +78,9 @@ Les différentes séances sont (avec accès au cours):
 
 ### BONUS
 
-[Créer un Rmarkdown](session5_rmarkdown/materiel/rmarkdown_session.html) 
+[Créer un Rmarkdown](Rmarkdown/materiel/rmarkdown_session.html) 
 
-[Solution des exercices - Créer un Rmarkdown](session5_rmarkdown/materiel/Solution.html)
+[Solution des exercices - Créer un Rmarkdown](Rmarkdown/materiel/Solution.html)
 
 
 <br>

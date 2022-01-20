@@ -1,5 +1,5 @@
 ---
-title: "Mise en pratique"
+title: "Réorganisation avancée de données"
 output:
   html_document:
     toc: yes
