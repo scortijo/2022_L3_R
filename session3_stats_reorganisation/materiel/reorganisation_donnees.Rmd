@@ -25,6 +25,10 @@ Aujourd’hui nous allons voir:
 
 2. Exporter le nouveau tableau créé dans R
 
+<br>
+
+# Mise en place
+
 Tout d'abord, créez un nouveau _script R_ et préparez votre environnement de travail:
 
 
