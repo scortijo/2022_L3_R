@@ -12,7 +12,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-[Retour à la page d'accueil](https://scortijo.github.io/2021_L3_R/)
+[Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
 
 
 Dans cette partie du cours vous allez apprendre à réorganiser des tables dans R. 
@@ -22,8 +22,6 @@ Cela peur être utile si vous ne devez travailler que sur une partie des donnée
 Aujourd’hui nous allons voir:
 
 1. Comment filtrer des lignes ou des colonnes dans un tableau
-
-2. Combiner ces réorganisations avec des graphiques
 
 2. Exporter le nouveau tableau créé dans R
 
@@ -160,76 +158,7 @@ filter(expt1, day.length == "8" | days.to.bolt > 85)
 
 
 
-# Combiner ces sélections avec un graphique
-
-Afin de pouvoir combiner la sélection de données avec un graphique, nous devons d'abord apprendre à faire des chaines de commandes.
-
-### Créer des chaînes de commandes avec les pipes `%>%`  
-
-Les "pipes" (`%>%`) permettent de faire une séquence d'opération sur des données, sans avoir besoin de créer des objets intermédiaires (ou de faire des commandes imbriquées très compliquées)
-
-
-Imaginons que nous voulions faire les sélections suivantes sur notre table:
-
-- Filtrer des données pour ne garder que les plantes qui ont été vernalisées
-
-- Ne garder que deux colonnes: le génotype et la taille totale des feuilles
-
-
-Grace au symbole `%>%` pipe, nous pouvons créer une chaîne de commandes. Pour cela nous devons d'abord faire une commande et ajouter `%>%` à la fin de la ligne qui va utiliser le résultat de cette commande comme input pour la fonction à la ligne suivante. 
-Voici comment faire:
-
-
-```{r}
-expt1 %>% 
-  filter(vernalization == "V") %>% 
-  select(genotype, total.leaf.length.mm)
-```
-
-
-> **Exercice 3:**
-> Utilisez `%>%` pour faire la suite de sélections suivantes sur`expt1`:
->
-> - Gardez les plantes qui _ne sont pas_ du background Ler, et qui ont été traitées avec la température fluctuante. 
-> - Ne gardez que les colonnes qui contiennent le génotype, la longueur de "blade" et des information sur le "bolting" (aide: utilisez `contains()`)
-
-
-
-### Combiner avec un graphique 
-
-Avec le pipe nous pouvons aussi utiliser l'output d'une commande (ou d'une chaîne de commandes) comme un input pour `ggplot` afin de faire un graphique sur les données sélectionnées.
-Ceci est très utile lors de la phase d'exploration des données (sans avoir à créer de nouveaux objets avec en permanence `<-`).
-
-Nous pouvons par exemple faire un box plot pour le temps de floraison en fonction de la fluctuation de température, mais celle fois uniquement pour les plantes qui ont été vernalisées:
-
-
-```{r, warning=FALSE}
-expt1 %>% 
-  filter(vernalization == "V") %>% 
-  ggplot(aes(fluctuation, days.to.flower)) + 
-  geom_boxplot()
-```
-
-> **Exercice 4:**
-> Faite un violon plot du temps de floraison pour les différents génotypes, mais uniquement pour les plantes ayant poussées en jours court (8h de lumière).
->
-> Aide: Utilisez `filter()` pour sélectionner les données et ensuite un pipe (`%>%`) pour utiliser l'output pour le graphique.
->
->
-
-
-> **BONUS**
->
-> Représentez, uniquement pour les plantes qui contiennent le mot "Col" dans le background, et qui ont poussée à 22°C, un box plot de _days.to.bolt_ en fonction du _day.length_, coloré en fonction de la _fluctuation_. Séparez les graphiques pour avoir une facet par _génotype_. Utilisez un thème de type _theme_bw_.
->
->
-> Interprétez le résultat: Est-ce que le temps de floraison de certains génotypes est affecté par la fluctuation de température. Si oui lesquels?
-
-
-<br>
-
-
-## Exporter le nouveau tableau créé dans R
+# Exporter le nouveau tableau créé dans R
 
 Aujourd'hui, nous avons fortement restructuré notre tableau. Nous pouvons le sauver pour le réutiliser ultérieurement.
 
@@ -272,4 +201,4 @@ A partir ce ce que nous avons vu aujourd'hui:
 
 
 
-[Retour à la page d'accueil](https://scortijo.github.io/2021_L3_R/)
+[Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
