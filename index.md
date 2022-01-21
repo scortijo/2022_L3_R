@@ -38,21 +38,21 @@ Les différentes séances sont (avec accès au cours):
 
 ### Séance 3 (xxx): Ajouter des résultats de tests statistiques à des graphiques et réorganiser des données
 
-[Partie 1 - Matériel ajouter des résultats de tests statistiquues à des graphiques]()  
+[Partie 1 - Matériel ajouter des résultats de tests statistiquues à des graphiques](session3_stats_reorganisation/materiel/statistiques.html)  
 
 <br>
 
-[Partie 2 - Matériel réorganisation de données](session3_plots_reorganisation/materiel/reorganisation_donnees.html)  
+[Partie 2 - Matériel réorganisation de données](session3_stats_reorganisation/materiel/reorganisation_donnees.html)  
 
-[Solution des exercices](session3_plots_reorganisation/materiel/reorganisation_donnees_solution_exercices.html)
+[Solution des exercices](session3_stats_reorganisation/materiel/reorganisation_donnees_solution_exercices.html)
 
 <br>
 
 ### Séance 4 (18/11/2021 8h-11h15): Réorganisation de données - suite
 
-[Matériel réorganisation de données - suite](session4_reorganisation_avancee/materiel/reorganisation_avancee.html)  
+[Matériel réorganisation de données - suite](session4_reorganisation_suite/materiel/reorganisation_suite.html)  
 
-[Solution des exercices](session4_reorganisation_avancee/materiel/reorganisation_avancee_solution_exercices.html)
+[Solution des exercices](session4_reorganisation_suite/materiel/reorganisation_suite_solution_exercices.html)
 
 
 <br>
@@ -60,9 +60,9 @@ Les différentes séances sont (avec accès au cours):
 ### Séance 5 (25/11/2021 8h-11h15): Réorganisation avancée de données
 
 
-[Matériel réorganisation de données avancée](session5_rmarkdown/materiel/amelioration_graphiques.html) 
+[Matériel réorganisation de données avancée](session5_reorganisation_avancee/materiel/reorganisation_avancee.html) 
 
-[Solution des exercices](session5_rmarkdown/materiel/amelioration_graphiques_solution_exercices.html)
+[Solution des exercices](session5_reorganisation_avancee/materielreorganisation_avancee_solution_exercices.html)
 
 <br>
 
