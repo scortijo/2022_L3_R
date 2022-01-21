@@ -52,6 +52,28 @@ Nous sommes maintenant prêt!
 
 ## Les tests statistiques 
 
+Dans cette partie du cours vous allez découvrir ce qu'est un **test statistique** : 
+
++ A quoi sert un test statistique et comment interpréter son résultat?
++ Comment choisir un test statistique approprié à ses données?
++ Comment incorporer des tests statistiques à des graphiques ggplot?
+
+
+### Principe des tests d'hypothèses
+
+
+La création de connaissances dans le processus de recherche repose sur la mise à l'épreuve d'hypothèses réfutables. 
+
+Un des principaux outils d'un chercheur est donc de formaliser ses questionnements et les choses qu'il souhaite vérifier sous forme d'hypothèses, qui seront ensuite confrontées aux données. Si les données concordent avec l’hypothèse émise avec une certitude suffisante, alors on considère que l'hypothèse a de bonne chance d'être correcte.
+
+
+Imaginons que nous développons un traitement qui est sensé modifier la biomasse des plantes. Nous souhaitons savoir s'il est efficace ou non. Nous mettons donc en place une expérience dans laquelle nous exposons des plantes au traitement et un autre groupe de plantes aux mêmes conditions que les premières, à la différence qu'elles ne reçoivent pas le traitement d'intérêt.
+Etant données les mesures de biomasse des plantes de ces deux groupes, nous pouvons donc tester notre traitement, et cela ce fait au moyen d'un test statistique.
+
+
+En effet, comparer des observations entre deux groupes "à l’œil" ne permet pas de déterminer si la variabilité de biomasse entre les deux groupes est plus forte que celle qu'on a naturellement entre des plantes du même groupe, et donc si le traitement a réellement un effet. Il nous faut un moyen de déterminer si la différence de biomasse entre les deux groupes est **significative**.
+
+
 <br>
 
 ## Ajouter des résultats de tests statistiques à des graphiques

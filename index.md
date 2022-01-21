@@ -38,7 +38,7 @@ Les différentes séances sont (avec accès au cours):
 
 ### Séance 3 (xxx): Ajouter des résultats de tests statistiques à des graphiques et réorganiser des données
 
-[Partie 1 - Matériel ajouter des résultats de tests statistiquues à des graphiques - suite]()  
+[Partie 1 - Matériel ajouter des résultats de tests statistiquues à des graphiques]()  
 
 <br>
 
