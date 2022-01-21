@@ -12,34 +12,29 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-[Retour à la page d'accueil](https://scortijo.github.io/2021_L3_R/)
+[Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
 
 <br>
 
 
 
 
-Dans cette partie du cours vous allez mettre en pratique ce que vous avez vu et apprendre de nouvelles fonction pour **ajouter des informations à des graphiques**. 
-Ajouter des informations sur les données ou personnaliser un graphique sont parfois essentiel pour bien faire ressortir le message d'un graphique.
-
-
-
 Aujourd’hui nous allons voir comment:
 
-1. Ajouter des statistiques descriptives à des graphiques
-
-2. Changer l'ordre des catégories dans un graphique
 
 
 
 
-Tout d'abord, créez un nouveau _Rmarkdown_, sauvez le dans `session5_rmarkdown` et préparez votre environnement de travail:
+
+# Mise en place
+
+Avant de rentrer dans le vif du sujet il nous faut mettre en place notre environnement de travail. Créez un nouveau script R et:
 
 
 ```{r}
 # Chargez la librairie `tidyverse`
 
-# Pas besoin de spécifier le repertoire de travail car il s'agit de celui du Rmarkdown
+# changer votre répertoire de travail pour être dans le dossier `session4_reorganisation_suite`:
 
 # Importer `burghardt_et_al_2015_expt1.txt` et mettez le dans un objet appelé `expt1`
 
@@ -59,10 +54,256 @@ expt1 <- read_tsv("../data/burghardt_et_al_2015_expt1.txt")
 
 <br>
 
-## Ajouter des statistiques descriptives à des graphiques 
+Nous sommes maintenant prêt!
+
+<br>
 
 
-### Extraire les statistiques descriptives avec `group_by()` et `summarise()`
+
+# Reformater des données avec `spread()` et `gather()`
+
+<br>
+
+## Passer au format large avec `spread()` 
+
+Parfois, le format de vos données ne vous permet pas de faire l'analyse ou le graphique que vous voulez.
+
+Par exemple, essayons de reproduire le graphique suivant extrait de [Burghard et al 2015](https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.13799)
+
+ ![](images/Burghard_2015_fig2_a.png)
+
+<br>
+
+Pour faire cette figure il nous faut une colonne avec le temps de floraison pour les plantes en conditions constante et une autre colonne avec le temps de floraison pour les plantes en condition variable. 
+Le temps de floraison pour toutes les plantes sont dans la même colonne dans notre tableau. Par contre, l'information sur le type de traitement (variable ou constant) est dans une autre colonne. Ce n'est pas ce que nous voulons! 
+Heureusement, nous pouvons utiliser la fonction `spread()` pour reformater notre tableau.
+
+
+Pour y voir plus clair, ne gardons que les colonnes qui vont nous être utiles à la création du tableau:
+
+
+
+```{r}
+
+expt1_subset <- select(expt1, plant_nb:vernalization, days.to.bolt)
+
+
+```
+
+Maintenant nous devons changer la structure de la table pour avoir une colonne avec le temps de floraison pour les plantes en conditions constante et une autre colonne avec le temps de floraison pour les plantes en condition variable. Un peu comme dans le schéma ci-dessous (pour aller du format "long" au format "wide").
+
+![](http://www.datacarpentry.org/R-ecology-lesson/img/spread_data_R.png)
+
+<br>
+
+La fonction `spread()` a besoin de deux informations:
+
+- Le nom de la colonne qui va permettre de créer les noms de colonnes dans la nouvelle table. Dans notre cas `fluctuation`
+
+- Le nom de la colonne qui contient les valeurs qui vont remplir les nouvelles colonnes. Dans notre cas `days.to.bolt`
+
+
+
+Voici comment restructurer notre tableau avec `spread()`:
+
+
+```{r}
+
+expt1_wide <- spread(expt1_subset, key=fluctuation, value = days.to.bolt)
+
+
+```
+
+Afin de pouvoir reproduire les couleurs du graphique, nous devons concaténer les colonnes `temperature` et `day.length`.
+Et nous pouvons enfin faire le graphique:
+
+
+```{r}
+
+unite(expt1_wide, "treatment", temperature, day.length) %>% 
+ggplot(aes(x=Con, y=Var, col=treatment, shape=treatment)) +
+  geom_point()
+
+
+```
+
+Comme vous avez vu, changer la structure du tableau nous a permis de faire un graphique que nous n'aurions pas pu faire autrement. Cela peut aussi permettre de faire des analyses supplémentaires.
+
+<br>
+
+<br>
+
+<br>
+
+### Passer au format long avec `gather()` 
+
+<br>
+
+Imaginons que nous souhaitons faire un boxplot pour le `days.to.bolt` et le `days.to.flower`. 
+
+
+```{r,  eval = TRUE,message=FALSE, echo=FALSE, warning=FALSE}
+gather(expt1, "trait", "time.in.days", days.to.bolt, days.to.flower) %>% 
+  ggplot(aes(x=trait, y=time.in.days, color=genotype)) +
+  geom_boxplot()
+```
+
+<br>
+
+Pour faire ce boxplor il nous faut réorganiser le tableau pour avoir les données pour ces deux mesures dans la même colonnes (`trait`) et une colonne indiquant s'il s'agit de la mesure de `days.to.bolt` ou `days.to.flower` (`time.in.days`). 
+
+<br>
+
+Pour cela nous utilisons la fonction `gather()` qui permet de passer d'un format "wide" à un format "long".
+![](http://www.datacarpentry.org/R-ecology-lesson/img/gather_data_R.png)
+
+
+<br>
+
+Dans ce cas, le nom des colonnes sélectionnées devient la "clé", c'est à dire les catégories dans la première colonne crée (en violet dans l'illustration). Et les valeurs de toutes ces colonnes sélectionnées vont remplir la deuxième colonne crée (en bleu dans l'illustration).
+
+<br>
+
+
+`gather()` à besoin de trois informations:  
+
+- le nom de la nouvelle colonne contenant les nom des vieilles colonnes (dans notre cas
+`trait`)
+
+- le nom de la nouvelle colonne contenant les valeurs des anciennes colonnes (dans notre cas `time.in.days`) 
+
+- le nom des anciennes colonnes que l'ont veut rassembler 
+
+Voici comment restructurer notre tableau avec `gather()`:
+
+```{r}
+expt1_long <- gather(expt1, "trait", "time.in.days", days.to.bolt, days.to.flower)
+```
+
+Nous pouvons maintenant faire notre boxplot
+
+
+```{r}
+ggplot(expt1_long, aes(x=trait, y=time.in.days, color=genotype)) +
+  geom_boxplot()
+```
+
+<br>
+
+Afin d'exporter ce graphique et de le sauver, nous utilisons la fonction `ggsave()`:
+
+
+```{r}
+ggplot(expt1_long, aes(x=trait, y=time.in.days, color=genotype)) +
+  geom_boxplot()
+
+ggsave("boxplot_daystobolt_daystoflower_genotypes.jpg")
+```
+
+<br>
+
+> **Exercice 1:** 
+> 
+> 1. Utilisez la fonction `gather()` pour restructurer le tableau afin de faire un boxplot de `blade.length.mm` et `total.leaf.length.mm`, coloré par  `fluctuation`.
+
+> 2. Ajoutez aux boxplots des encoches indiquant l'étendue de l'intervalle de confiance à 95% de la médiane (voir l'option `notch` dans `geom_boxplot`). Si les encoches sont étroite, il y a peu d'incertitude sur la médiane, si les encoches sont large, il y a une forte incertitude sur la médiane. Si les encoches de boxplots que nous comparons se chevauchent, alors nous ne pouvons pas conclure à une différence de médiane entre les médiane des deux groupes.  
+
+> 3. Interprétez le graphique: Y a t'il un effet de la fluctuation de température sur la longueur de blade ou de la feuille? Pourquoi?
+
+>
+> **BONUS**
+> Optimisez le graphique obtenu en jouant sur le thème, les couleurs utilisée (visibles par des daltoniens), le titre et la valeur des axes et de la légende, de manière à avoir un graphique similaire au graphique suivant:
+
+
+
+```{r,  eval = TRUE,message=FALSE, echo=FALSE, warning=FALSE}
+
+gather(expt1, "trait", "length.mm", blade.length.mm, total.leaf.length.mm) %>% 
+  ggplot(aes(x=trait, y=length.mm, fill=fluctuation)) +
+  geom_boxplot(notch=TRUE) +
+  scale_fill_brewer(palette = "Set2", labels = c("Con"="Constant", "Var"="Variable"), 
+                    name="Fluctuation type") +
+  theme_bw() +
+  scale_x_discrete(name="",labels=c("blade.length.mm"="Blade","total.leaf.length.mm"="Total leaf")) +
+  ylab("Length (mm)")
+
+
+```
+
+<br>
+
+
+
+# Combiner plusieurs tableaux en un (`*_join()`)
+
+Quand nous analysons des données, il n'est pas rare que nous ayons plusieurs tableaux contenant des informations de différents types mais qui sont liées les unes aux autres. Afin de répondre à certaines questions, nous devons parfois combiner ces différents tableau en un seul, à l'aide d'une certaine colonne. 
+
+Pour cela nous pouvons utiliser une des fonction de la famille `*_join`.
+
+Toutes ces fonctions ont besoin de trois choses:
+- Le nom du premier tableau (celui de gauche)
+- Le nom du second tableau (celui de droite)
+- Le nom de la colonne qui est utilisée pour combiner les tableaux ensemble (il est aussi possible d'utiliser plus d'une colonne)
+
+Afin de comprendre comment ces fonctions marchent, nous allons utiliser deux jeux de données qui sont déjà présent dans R:
+
+- `band_members` 
+```{r}
+band_members
+```
+- `band_instruments`
+```{r}
+band_instruments
+```
+
+
+La fonction `full_join()`, permet de garder toutes les lignes et toutes les colonnes des deux tableaux dans le nouveau tableau créé en les combinant. Dans notre cas, pour avoir toutes les information sur le groupe de musique et l'instrument pour chaque musicien, nous utilisons:
+
+
+```{r full_join2}
+full_join(band_members, band_instruments, by="name")
+```
+
+Vous pouvez voir que quand le groupe de musique ou l'instrument d'un musicien est manquante, un 'NA' est utilisé à la place.
+
+
+Regardons les autres fonctions de la famille `*_join()`
+
+
+- Pour garder les données uniquement pour les musiciens présents dans ``band_members`` (table de gauche dans la fonction), nous utilisons `left_join()`:
+
+
+```{r}
+left_join(band_members, band_instruments, by="name")
+```
+
+- Pour garder les données uniquement pour les musiciens présents dans ``band_instruments`` (table de droite dans la fonction), nous utilisons `right_join()`:
+
+```{r}
+right_join(band_instruments, band_members, by="name")
+```
+
+- Pour garder uniquement les musiciens qui sont les deux tableaux, nous utilisons `inner_join()`:
+
+```{r}
+inner_join(band_members, band_instruments, by="name")
+```
+Dans ce cas il n'y a pas de 'NA'
+
+
+Ces fonctions peuvent être utiles pour comparer de gros jeux de données :
+
+- `inner_join()` est l'équivalent de _l'intersection_ entre deux jeux de données.
+
+- `full_join()` est l'équivalent de  _l'union_ de deux jeux de données.
+
+<br>
+
+
+# Ajouter des statistiques descriptives à des graphiques 
+
+
+## Extraire les statistiques descriptives avec `group_by()` et `summarise()`
 
 
 Parfois nous voulons résumer nos données dans une table plus petite et en extraire des statistiques descriptives (moyenne, médiane, nombre d'observations ...).
@@ -135,7 +376,7 @@ count(expt1, genotype)
 **Attention:** Quand vous utilisez la fonction `group_by()`, les lignes du tableau restent groupées en fonction de la variable utilisée. Les opérations suivantes vont utiliser ces groupes, ce qui peut poser problème. Pensez à utiliser la fonction `ungroup()` pour enlever les groupes quand vous avez fini avec `group_by()` et `summarise()`
 
 
-> **Exercice 1:**
+> **Exercice 2:**
 >
 > Calculez la médiane et l'écart-type de `blade.length.mm` et `total.leaf.length.mm` pour chaque `genotype` aux différentes `day.length`. Ajoutez aussi le nombre d'observations de chaque groupe 
 >
@@ -143,7 +384,7 @@ count(expt1, genotype)
 
 <br>
 
-### Faire un graphique avec les statistiques descriptives 
+## Faire un graphique avec les statistiques descriptives 
 
 Maintenant que nous savons extraire des statistiques descriptives de nos données, nous pouvons les utiliser pour faire des graphiques. 
 
@@ -174,7 +415,7 @@ summarise(mean.days.flower = mean(days.to.flower, na.rm = TRUE),
   geom_line(aes(group=genotype))
 ```
 
-### Insérer les statistiques descriptives à un graphique
+## Insérer les statistiques descriptives à un graphique
 
 Une autre possibilité est d'ajouter les statistiques descriptives à un graphique contenant les données.
 
@@ -211,7 +452,7 @@ group_by(expt1, genotype) %>%
 
 <br>
 
-> **Exercice 2**
+> **Exercice 3**
 >
 > Faites un voilin plot de `total.leaf.length.mm` pour chaque génotype et ajoutez la médiane pour chaque groupe (avec un point coloré) ainsi que le nombre d'observation de chaque groupe
 >
@@ -220,7 +461,7 @@ group_by(expt1, genotype) %>%
 
 
 > **BONUS**
-> Lisez la partie du cours sur les facteurs (que nous n'aurons pas le temps de traiter) et faites l'exercice 3.
+> Lisez la partie du cours sur les facteurs (que nous n'aurons pas le temps de traiter) et faites l'exercice 4.
 
 <br>
 
@@ -314,7 +555,7 @@ Nous pouvons aussi ordonner les génotypes en fonction de `days.to.bolt`. Pour c
 ```
 
 
-> **Exercice 3**
+> **Exercice 4**
 >
 > Représenter des violin plots de `cauline.leaf.num` pour les génotypes de `background` "Col", colorés par la température et ce uniquement pour les plantes sans fluctuation de température et qui sont en jours longs (16 h). 
 >
@@ -326,28 +567,9 @@ Nous pouvons aussi ordonner les génotypes en fonction de `days.to.bolt`. Pour c
 >
 
 
-
-
-## Retravailler un graphique pour suivre les règles de bonne pratique 
-
-Reprenons le premier graphique extrait de [Burghard et al 2015](https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.13799)  que vous avez reproduit à la fin de la séance 2
-![](images/Burghard_fig2BC.png)
-
 <br>
 
-> **Mise en pratique**
->
-> En utilisant les [règles de bonne pratique pour des graphiques](session3_plots_reorganisation/materiel/ggplot_suite.html) que nous avons vu lors de la séance 3, discutez en groupes des améliorations possibles de ce graphique.
->
-> Ensuite, en utilisant les outils que vous avez vus ces dernières semaines, effectuez ces changements.
->
->
-> Rappel: utilisez `filter()` pour sélectionner une partie des données, `mutate()` pour ajouter ou changer des colonnes, une fonction de la famille `*_join()` pour combiner deux tableaux et la combinaison de `group_by()` et `summarise()` pour extraire des statistiques descriptives. 
-> N'oubliez pas d'utiliser des pipes (`%>%`) pour faire des chaines de commandes
->
-
-
-## Ressources et liens utiles:
+# Ressources et liens utiles:
 
 - [antisèche pour la réorganisation de données](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 - [Chapitre sur la réorganisation de données ddu livre 'R for Data Science'](http://r4ds.had.co.nz/transform.html)
@@ -357,7 +579,7 @@ Reprenons le premier graphique extrait de [Burghard et al 2015](https://nph.onli
 
 ******
   
-##  <span style="color: blue;">A faire pour la prochaine séance </span>
+#  <span style="color: blue;">A faire pour la prochaine séance </span>
 
 La semaine prochaine nous allons faire un examen blanc, vous demandant d'explorer un jeu de donnée. Il s'agira d'une mise en pratique des fonctions que nous avons vu jusqu'ici. Vous devrez écrire l'ensemble dans un format Rmarkdown.
 
@@ -371,7 +593,7 @@ Lors de l'examen blanc (et de l'examen final) vous aurez accès au cours et à v
 
 
 
-[Retour à la page d'accueil](https://scortijo.github.io/2021_L3_R/)
+[Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
 
 
 
