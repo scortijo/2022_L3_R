@@ -13,7 +13,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-[Retour à la page d'accueil](https://scortijo.github.io/2021_L3_R/)
+[Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
 
 
 Dans cette seconde partie de la section dédiée à la visualisation de données vous allez apprendre:
@@ -482,5 +482,5 @@ Vous pouvez trouver des exemples de chaque cas et quelques points supplémentair
 
 -------
 
-[Retour à la page d'accueil](https://scortijo.github.io/2021_L3_R/)
+[Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
 
