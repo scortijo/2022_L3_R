@@ -62,7 +62,7 @@ Les différentes séances sont (avec accès au cours):
 
 [Matériel réorganisation de données avancée](session5_reorganisation_avancee/materiel/reorganisation_avancee.html) 
 
-[Solution des exercices](session5_reorganisation_avancee/materielreorganisation_avancee_solution_exercices.html)
+[Solution des exercices](session5_reorganisation_avancee/materiel/reorganisation_avancee_solution_exercices.html)
 
 <br>
 
