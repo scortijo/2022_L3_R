@@ -74,7 +74,7 @@ Les différentes séances sont (avec accès au cours):
 ### Séance 7 (xxx): Exam
 
 
-
+<br>
 
 ### BONUS
 
