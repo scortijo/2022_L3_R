@@ -92,10 +92,9 @@ Tout d'abord, nous devons connaitre les différentes valeurs de la colonne `vern
 
 
 ```{r}
-unique(expt1$vernalization)
+distinct(expt1, vernalization)
 ```
 
-(**note:** `$` permet de sélectionner une colonne en particulier de la table)
 
 Comme nous voulons garder les plantes qui ont subies une vernalisation, nous devons filtrer les données pour garder les lignes pour lesquelles il y a "V" dans la colonne `vernalization`:
 
