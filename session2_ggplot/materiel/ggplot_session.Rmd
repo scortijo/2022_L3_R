@@ -110,7 +110,7 @@ expt1
 
 Cela va montrer les 10 premières lignes du tableau ainsi que les colonnes qui rentrent dans l'écran. 
 
-> **Exercice:** Combien y a-t-il de lignes et colonnes dans les données?
+> Combien y a-t-il de lignes et colonnes dans les données?
 
 Une autre option est d'utiliser la fonction  ``View()`` pour accéder à une table interactive où il est possible de trier et filtrer les données sans modifier l'objet:
 
@@ -124,7 +124,7 @@ View(expt1)
 glimpse(expt1)
 ```
 
-> **Exercice** Quel est le type des variables dans les données ? 
+> Quel est le type des variables dans les données ? 
 
 - ``dim()`` indique les dimensions du jeu de données (nombre de lignes et colonnes).
 
@@ -158,9 +158,9 @@ Heureusement, pour nous aider, une aide est disponible dans R en tapant le nom d
 
 Bien sur, une recherche sur internet est aussi une solution très efficace pour trouver de l'aide! 
 
-> **Exercice** que fait la fonction ``head()`` ? 
+>  Que fait la fonction ``head()`` ? 
 
-> **Exercice** Comment regarder les dernières lignes de le notre jeu de données? (indice: ``?tail``)
+>  Comment regarder les dernières lignes de le notre jeu de données? (indice: ``?tail``)
 
 
 ## Inspection visuelle des données
@@ -171,7 +171,7 @@ Pour avoir une vue d'ensemble du jeu de données et détecter des problèmes, no
 vis_dat(expt1)
 ```
 
-> **Exercice** Quel est le type de données le plus courant dans le jeu de données ? 
+> Quel est le type de données le plus courant dans le jeu de données ? 
 Y a-t-il des problème?
 
 
@@ -253,6 +253,9 @@ ggplot(expt1, aes(genotype, days.to.flower)) +
 
 > **Exercice 1:** Pouvez vous dessiner un violin plot? (indice: ``?geom_violin``)
 
+> **BONUS** Quel autre type de géométrie pouvez vous utilisez avec des données de ce type (catégories sur l'axe x et chiffres sur l'axe y)? 
+> *Aide*: Utilisez [cet arbre de décision](https://www.data-to-viz.com/) pour choisir les géométries appropriées.
+
 
 ## Ajout de plusieurs couches
 
@@ -266,6 +269,8 @@ ggplot(expt1, aes(genotype, rosette.leaf.num)) +
 ```
 
 >**Exercice 2:** Modifiez le graphique pour que les points soient devant plutôt que derrière les boxplots. 
+
+>**BONUS**: Ajouter la géométrie dotplot plutôt que jitter. Utilisez l'aide (avec ?nom de fonction) pour savoir comment l'utiliser
 
 
 ## Couleurs!
@@ -327,6 +332,8 @@ ggplot(expt1, aes(genotype, days.to.flower)) +
 > Pour cela, dessinez un scatter plot (`geom_point()`) entre `blade.length.mm` et `rosette.leaf.num` en colorant les points en fonction de `genotype`. 
 >
 > Que se passe t-il si les points sont colorés en fonction de `days.to.bolt`?
+
+> **BONUS**: Dessinez un scatter plot (`geom_point()`) entre `blade.length.mm` et `rosette.leaf.num` en colorant les points en fonction de `vernalization`, et changez la couleur des points pour que "NV" soit en bleu et "V" soit en orange.
 
 
 ## Facetting
