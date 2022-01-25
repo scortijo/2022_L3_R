@@ -23,6 +23,17 @@ ggplot(expt1, aes(genotype, days.to.flower)) +
   geom_violin()
 ```
 
+<br>
+
+> **BONUS** Quel autre type de géométrie pouvez vous utilisez avec des données de ce type (catégories  et nombres)? 
+> *Aide*: Utilisez [cet arbre de décision](https://www.data-to-viz.com/) pour choisir les géométries appropriées.
+
+
+```{r}
+#Il est aussi possible d'utiliser une densité ou un histogramme
+```
+
+
 -----------------------
 
 >**Exercice 2:** Modifiez le graphique pour que les points soient devant plutôt que derrière les boxplots. 
@@ -32,6 +43,17 @@ ggplot(expt1, aes(genotype, rosette.leaf.num)) +
   geom_boxplot() + 
   geom_jitter()
 ```
+
+<br>
+
+>**BONUS**: Ajouter la géométrie dotplot plutôt que jitter. Utilisez les exemples dans l'aide (avec ?nom de fonction) pour savoir comment l'utiliser, ou lisez [cette page de blog](http://www.sthda.com/french/wiki/ggplot2-dot-plot-guide-de-demarrage-rapide-logiciel-r-et-visualisation-de-donnees)
+
+```{r}
+ggplot(expt1, aes(genotype, rosette.leaf.num)) +
+  geom_boxplot() + 
+  geom_dotplot(binaxis='y', stackdir='center', binwidth = 1)
+```
+
 
 ----------------------
 
@@ -52,6 +74,17 @@ L'échelle de couleur est continue si nous utilisons `days.to.bolt` pour colorer
 ```{r}
 ggplot(expt1, aes(blade.length.mm, rosette.leaf.num, colour = days.to.bolt)) +
   geom_point()
+```
+
+<br>
+
+> **BONUS**: Dessinez un scatter plot (`geom_point()`) entre `blade.length.mm` et `rosette.leaf.num` en colorant les points en fonction de `vernalization`, et changez la couleur des points pour que "NV" soit en bleu et "V" soit en vert.
+>*Aide*: Trouvez la solution en ligne (par exemple en tapant "change color points ggplot R")
+
+```{r}
+ggplot(expt1, aes(blade.length.mm, rosette.leaf.num, colour = vernalization)) +
+  geom_point() +
+  scale_color_manual(values=c("blue","green"))
 ```
 
 
