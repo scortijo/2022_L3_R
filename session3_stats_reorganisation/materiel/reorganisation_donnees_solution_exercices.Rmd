@@ -33,6 +33,30 @@ select(expt1, contains("mm"))
 
 <br>
 
+
+> **BONUS**:    
+> 1. Sélectionnez les colonnes dont le titre finit par "bolt"   
+
+> *Aide*: Aidez vous des exemples dans l'aide de R ou cherchez dans google
+
+
+```{r}
+select(expt1, ends_with("bolt"))
+```
+
+<br>
+> 2. Sélectionnez les colonnes qui ne sont pas `plant_nb` et `genotype` 
+
+
+
+```{r}
+select(expt1, -plant_nb, -genotype)
+```
+
+
+<br>
+
+
 ******
 
 > **Exercice 2:**
@@ -59,6 +83,28 @@ filter(expt1, days.to.bolt<57  & rosette.leaf.num<40)
 # 3. Filtrez les plantes du génotype fca-6 pour qui le blade.length.mm n'est pas manquant
 
 filter(expt1, genotype=="fca-6"  & !is.na(blade.length.mm))
+
+
+```
+
+
+
+<br>
+
+
+
+>**BONUS**:   
+> Les lignes pour lesquelles le background contient **Col**   
+> Vérifiez le résultat en sauvant le résultat dans un nouvel objet et en utilisant le fonction `distinct()`   
+> *Aide*: Faites un recherche sur google pour trouver le resultat
+
+
+```{r}
+
+filter(expt1, )
+
+
+
 
 
 ```

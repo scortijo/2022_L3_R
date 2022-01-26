@@ -81,8 +81,17 @@ Il est aussi possible de ne garder que les colonnes qui contiennent le mot "bolt
 select(expt1, contains("bolt"))
 ```
 
-> **Exercice 1** : Sélectionnez les colonnes qui contiennent des données mesurées en mm
+<br>
 
+> **Exercice 1** : Sélectionnez les colonnes qui contiennent des données mesurées en mm
+>
+
+> **BONUS**:    
+> 1. Sélectionnez les colonnes dont le titre finit par "bolt"   
+> 2. Sélectionnez les colonnes qui ne sont pas `plant_nb` et `genotype`   
+> *Aide*: Aidez vous des exemples dans l'aide de R ou cherchez dans google
+
+<br>
 
 # Sélectionner des lignes à partir de critères  avec la fonction `filter()`
 
@@ -152,14 +161,22 @@ Il est aussi possible de sélectionner les plantes qui ont poussées avec 8h de 
 filter(expt1, day.length == "8" | days.to.bolt > 85)
 ```
 
+<br>
+
 > **Exercice 2:**
-> Filtrez les données pour garder les plantes selon les 3 cas de figures suivant (indépendants les uns des autres):
+> Filtrez les données pour garder les plantes selon les 3 cas de figures suivant (indépendants les uns des autres):   
 >
-> 1. Plantes qui **ne sont pas du background Ler** et qui ont été traitées avec **une température fluctuante**.
-> 2. Plantes qui ont fleuries (bolt) en moins de  **57 jours** et qui ont **moins de 40 feuilles de rosette**
-> 3. Plantes du génotype **fca-6** pour qui le **blade.length.mm n'est pas manquant**
+> 1. Plantes qui **ne sont pas du background Ler** et qui ont été traitées avec **une température fluctuante**.   
+> 2. Plantes qui ont fleuries (bolt) en moins de  **57 jours** et qui ont **moins de 40 feuilles de rosette**    
+> 3. Plantes du génotype **fca-6** pour qui le **blade.length.mm n'est pas manquant**   
 
 
+>**BONUS**:   
+> Les lignes pour lesquelles le background contient **Col**   
+> Vérifiez le résultat en sauvant le résultat dans un nouvel objet et en utilisant le fonction `distinct()`   
+> *Aide*: Faites un recherche sur google pour trouver le resultat
+
+<br>
 
 # Exporter le nouveau tableau créé dans R
 
