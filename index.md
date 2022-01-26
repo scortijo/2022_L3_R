@@ -40,6 +40,8 @@ Les différentes séances sont (avec accès au cours):
 
 [Partie 1 - Matériel ajouter des résultats de tests statistiques à des graphiques](session3_stats_reorganisation/materiel/statistiques.html)  
 
+[Solution des exercices](session3_stats_reorganisation/materiel/statistiques_solution_exercices.html)  
+
 <br>
 
 [Partie 2 - Matériel réorganisation de données](session3_stats_reorganisation/materiel/reorganisation_donnees.html)  
