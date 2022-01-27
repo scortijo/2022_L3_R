@@ -88,8 +88,8 @@ select(expt1, contains("bolt"))
 
 > **BONUS**:    
 > 1. Sélectionnez les colonnes dont le titre finit par "bolt"   
-> 2. Sélectionnez les colonnes qui ne sont pas `plant_nb` et `genotype`   
-> *Aide*: Aidez vous des exemples dans l'aide de R ou cherchez dans google
+> 2. Sélectionnez les colonnes qui ne sont pas `plant_nb` et `genotype`    
+> *Aide*: Regardez les exemples dans l'aide de R ou cherchez dans google
 
 <br>
 

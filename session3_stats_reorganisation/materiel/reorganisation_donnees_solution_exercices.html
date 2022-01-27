@@ -404,9 +404,11 @@ summary {
 1. Sélectionnez les colonnes dont le titre finit par “bolt”</p>
 </blockquote>
 <blockquote>
-<p><em>Aide</em>: Aidez vous des exemples dans l’aide de R ou cherchez dans google</p>
+<p><em>Aide</em>: Regardez les exemples dans l’aide de R ou cherchez dans google</p>
 </blockquote>
-<pre class="r"><code>select(expt1, ends_with(&quot;bolt&quot;))</code></pre>
+<pre class="r"><code># En tapant &quot;R tidyverse select column that ends with a specific text&quot; dans google, le 1er site (https://dplyr.tidyverse.org/reference/select.html) indique d'utiliser &quot;ends_with&quot; dans la fonction select
+
+select(expt1, ends_with(&quot;bolt&quot;))</code></pre>
 <pre><code>## # A tibble: 957 x 2
 ##    bolt  days.to.bolt
 ##    &lt;chr&gt;        &lt;dbl&gt;
@@ -513,9 +515,9 @@ Filtrez les données pour garder les lignes pour lesquelles le background contie
 Sauvez le résultat dans un nouvel objet et vérifier quelles valeurs distinctes sont dans la colonne background en utilisant le fonction <code>distinct()</code><br />
 <em>Aide</em>: Faites un recherche sur google pour trouver le résultat</p>
 </blockquote>
-<pre class="r"><code># Il existe plusieurs solutions
+<pre class="r"><code># Il existe plusieurs solutions. En tapant &quot;R tidyverse filter lines containing text&quot; dans google 
 
-# selon ce site: https://www.statology.org/filter-rows-that-contain-string-dplyr/ nous pouvons faire
+# Le 2eme site (https://www.statology.org/filter-rows-that-contain-string-dplyr/) propose de faire 
 
 expt1_col_background &lt;- filter(expt1, grepl(&quot;Col&quot;, background))
 distinct(expt1_col_background,background)</code></pre>
@@ -524,7 +526,7 @@ distinct(expt1_col_background,background)</code></pre>
 ##   &lt;chr&gt;     
 ## 1 Col       
 ## 2 Col FRI</code></pre>
-<pre class="r"><code># selon ce site: https://sebastiansauer.github.io/dplyr_filter/ nous pouvons faire
+<pre class="r"><code># Le 4eme site (https://sebastiansauer.github.io/dplyr_filter/) propose de faire
 
 expt1_col_background2 &lt;- filter(expt1, str_detect(background, &quot;Col&quot;))
 distinct(expt1_col_background2,background)</code></pre>
