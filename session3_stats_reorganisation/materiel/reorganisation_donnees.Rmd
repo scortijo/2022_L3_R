@@ -172,9 +172,9 @@ filter(expt1, day.length == "8" | days.to.bolt > 85)
 
 
 >**BONUS**:   
-> Les lignes pour lesquelles le background contient **Col**   
-> Vérifiez le résultat en sauvant le résultat dans un nouvel objet et en utilisant le fonction `distinct()`   
-> *Aide*: Faites un recherche sur google pour trouver le resultat
+> Filtrez les données pour garder les lignes pour lesquelles le background contient **Col**   
+> Sauvez le résultat dans un nouvel objet et vérifier quelles valeurs distinctes sont dans la colonne background en utilisant le fonction `distinct()`   
+> *Aide*: Faites un recherche sur google pour trouver le résultat
 
 <br>
 

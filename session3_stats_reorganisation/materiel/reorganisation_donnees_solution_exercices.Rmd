@@ -94,17 +94,24 @@ filter(expt1, genotype=="fca-6"  & !is.na(blade.length.mm))
 
 
 >**BONUS**:   
-> Les lignes pour lesquelles le background contient **Col**   
-> Vérifiez le résultat en sauvant le résultat dans un nouvel objet et en utilisant le fonction `distinct()`   
-> *Aide*: Faites un recherche sur google pour trouver le resultat
+> Filtrez les données pour garder les lignes pour lesquelles le background contient **Col**   
+> Sauvez le résultat dans un nouvel objet et vérifier quelles valeurs distinctes sont dans la colonne background en utilisant le fonction `distinct()`   
+> *Aide*: Faites un recherche sur google pour trouver le résultat
 
 
 ```{r}
+# Il existe plusieurs solutions
 
-filter(expt1, )
+# selon ce site: https://www.statology.org/filter-rows-that-contain-string-dplyr/ nous pouvons faire
+
+expt1_col_background <- filter(expt1, grepl("Col", background))
+distinct(expt1_col_background,background)
 
 
+# selon ce site: https://sebastiansauer.github.io/dplyr_filter/ nous pouvons faire
 
+expt1_col_background2 <- filter(expt1, str_detect(background, "Col"))
+distinct(expt1_col_background2,background)
 
 
 ```

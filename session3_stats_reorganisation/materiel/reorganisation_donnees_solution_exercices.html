@@ -399,6 +399,47 @@ summary {
 ## 10            19.4                 33.2
 ## # … with 947 more rows</code></pre>
 <p><br></p>
+<blockquote>
+<p><strong>BONUS</strong>:<br />
+1. Sélectionnez les colonnes dont le titre finit par “bolt”</p>
+</blockquote>
+<blockquote>
+<p><em>Aide</em>: Aidez vous des exemples dans l’aide de R ou cherchez dans google</p>
+</blockquote>
+<pre class="r"><code>select(expt1, ends_with(&quot;bolt&quot;))</code></pre>
+<pre><code>## # A tibble: 957 x 2
+##    bolt  days.to.bolt
+##    &lt;chr&gt;        &lt;dbl&gt;
+##  1 Y               28
+##  2 Y               29
+##  3 Y               31
+##  4 Y               31
+##  5 Y               32
+##  6 Y               33
+##  7 Y               34
+##  8 Y               35
+##  9 Y               69
+## 10 Y               72
+## # … with 947 more rows</code></pre>
+<p><br> &gt; 2. Sélectionnez les colonnes qui ne sont pas <code>plant_nb</code> et <code>genotype</code></p>
+<pre class="r"><code>select(expt1, -plant_nb, -genotype)</code></pre>
+<pre><code>## # A tibble: 957 x 13
+##    background temperature fluctuation day.length vernalization bolt.survival
+##    &lt;chr&gt;            &lt;dbl&gt; &lt;chr&gt;            &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;        
+##  1 Col                 12 Con                 16 NV            Y            
+##  2 Col                 12 Con                 16 NV            Y            
+##  3 Col                 12 Con                 16 NV            Y            
+##  4 Col                 12 Con                 16 NV            Y            
+##  5 Col                 12 Con                 16 NV            Y            
+##  6 Col                 12 Con                 16 NV            Y            
+##  7 Col                 12 Con                 16 NV            Y            
+##  8 Col                 12 Con                 16 NV            Y            
+##  9 Col                 12 Con                  8 NV            Y            
+## 10 Col                 12 Con                  8 NV            Y            
+## # … with 947 more rows, and 7 more variables: bolt &lt;chr&gt;, days.to.bolt &lt;dbl&gt;,
+## #   days.to.flower &lt;dbl&gt;, rosette.leaf.num &lt;dbl&gt;, cauline.leaf.num &lt;dbl&gt;,
+## #   blade.length.mm &lt;dbl&gt;, total.leaf.length.mm &lt;dbl&gt;</code></pre>
+<p><br></p>
 <hr />
 <blockquote>
 <p><strong>Exercice 2:</strong> Filtrez les données pour garder les plantes selon les 3 cas de figures suivant (indépendants les uns des autres):</p>
@@ -424,7 +465,7 @@ filter(expt1, background!=&quot;Ler&quot; &amp; fluctuation==&quot;Var&quot;)</c
 ##  8        8 Col Ama  Col                 12 Var                 16 NV           
 ##  9        1 Col Ama  Col                 12 Var                  8 NV           
 ## 10        2 Col Ama  Col                 12 Var                  8 NV           
-## # … with 379 more rows, and 8 more variables: survival.bolt &lt;chr&gt;, bolt &lt;chr&gt;,
+## # … with 379 more rows, and 8 more variables: bolt.survival &lt;chr&gt;, bolt &lt;chr&gt;,
 ## #   days.to.bolt &lt;dbl&gt;, days.to.flower &lt;dbl&gt;, rosette.leaf.num &lt;dbl&gt;,
 ## #   cauline.leaf.num &lt;dbl&gt;, blade.length.mm &lt;dbl&gt;, total.leaf.length.mm &lt;dbl&gt;</code></pre>
 <pre class="r"><code># 2. Filtrez les plantes qui ont fleuries (bolt) en moins de  57 jours et qui ont moins de 40 feuilles.
@@ -443,7 +484,7 @@ filter(expt1, days.to.bolt&lt;57  &amp; rosette.leaf.num&lt;40)</code></pre>
 ##  8        8 Col Ama  Col                 12 Con                 16 NV           
 ##  9        1 Col Ama  Col                 12 Var                 16 NV           
 ## 10        2 Col Ama  Col                 12 Var                 16 NV           
-## # … with 379 more rows, and 8 more variables: survival.bolt &lt;chr&gt;, bolt &lt;chr&gt;,
+## # … with 379 more rows, and 8 more variables: bolt.survival &lt;chr&gt;, bolt &lt;chr&gt;,
 ## #   days.to.bolt &lt;dbl&gt;, days.to.flower &lt;dbl&gt;, rosette.leaf.num &lt;dbl&gt;,
 ## #   cauline.leaf.num &lt;dbl&gt;, blade.length.mm &lt;dbl&gt;, total.leaf.length.mm &lt;dbl&gt;</code></pre>
 <pre class="r"><code># 3. Filtrez les plantes du génotype fca-6 pour qui le blade.length.mm n'est pas manquant
@@ -462,9 +503,36 @@ filter(expt1, genotype==&quot;fca-6&quot;  &amp; !is.na(blade.length.mm))</code>
 ##  8        8 fca-6    Ler                 12 Con                 16 NV           
 ##  9        1 fca-6    Ler                 12 Con                  8 NV           
 ## 10        2 fca-6    Ler                 12 Con                  8 NV           
-## # … with 34 more rows, and 8 more variables: survival.bolt &lt;chr&gt;, bolt &lt;chr&gt;,
+## # … with 34 more rows, and 8 more variables: bolt.survival &lt;chr&gt;, bolt &lt;chr&gt;,
 ## #   days.to.bolt &lt;dbl&gt;, days.to.flower &lt;dbl&gt;, rosette.leaf.num &lt;dbl&gt;,
 ## #   cauline.leaf.num &lt;dbl&gt;, blade.length.mm &lt;dbl&gt;, total.leaf.length.mm &lt;dbl&gt;</code></pre>
+<p><br></p>
+<blockquote>
+<p><strong>BONUS</strong>:<br />
+Filtrez les données pour garder les lignes pour lesquelles le background contient <strong>Col</strong><br />
+Sauvez le résultat dans un nouvel objet et vérifier quelles valeurs distinctes sont dans la colonne background en utilisant le fonction <code>distinct()</code><br />
+<em>Aide</em>: Faites un recherche sur google pour trouver le résultat</p>
+</blockquote>
+<pre class="r"><code># Il existe plusieurs solutions
+
+# selon ce site: https://www.statology.org/filter-rows-that-contain-string-dplyr/ nous pouvons faire
+
+expt1_col_background &lt;- filter(expt1, grepl(&quot;Col&quot;, background))
+distinct(expt1_col_background,background)</code></pre>
+<pre><code>## # A tibble: 2 x 1
+##   background
+##   &lt;chr&gt;     
+## 1 Col       
+## 2 Col FRI</code></pre>
+<pre class="r"><code># selon ce site: https://sebastiansauer.github.io/dplyr_filter/ nous pouvons faire
+
+expt1_col_background2 &lt;- filter(expt1, str_detect(background, &quot;Col&quot;))
+distinct(expt1_col_background2,background)</code></pre>
+<pre><code>## # A tibble: 2 x 1
+##   background
+##   &lt;chr&gt;     
+## 1 Col       
+## 2 Col FRI</code></pre>
 <p><br></p>
 <hr />
 
