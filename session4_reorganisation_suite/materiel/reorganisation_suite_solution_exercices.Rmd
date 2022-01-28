@@ -44,6 +44,40 @@ filter(expt1,  background!="Ler" & fluctuation=="Var") %>%
 
 <br>
 
+
+
+> **BONUS**: Transformez l'enchainement de commandes afin d'utiliser des pipes `%>%` plutôt que objets intermédiaires
+> 
+
+
+
+```{r, message=FALSE}
+
+expt1 <- read_tsv("../data/burghardt_et_al_2015_expt1.txt")
+
+expt1_filtered <- filter(expt1, fluctuation=="Con" & day.length=="16")
+
+expt1_selected <- select(expt1_filtered,days.to.bolt:total.leaf.length.mm)
+
+summary(expt1_selected)
+
+```
+
+<br>
+
+Solution:
+```{r, message=FALSE}
+
+read_tsv("../data/burghardt_et_al_2015_expt1.txt") %>% 
+  filter(fluctuation=="Con" & day.length=="16") %>% 
+  select(days.to.bolt:total.leaf.length.mm) %>% 
+  summary()
+
+```
+
+
+<br>
+
 ******
 
 
@@ -96,7 +130,7 @@ Cet effet est très marqué pour les génotypes Col FRI, prmt5 FRI et vin3-4 FRI
 
 > **Exercice 3:**
 >
-> Créez une nouvelle colonne (blade.ratio) avec le ratio de `blade.length.mm` et `total.leaf.length.mm`
+> Créez une nouvelle colonne "blade.ratio" avec le ratio de `blade.length.mm` et `total.leaf.length.mm`
 >
 
 
@@ -107,6 +141,20 @@ mutate(expt1, blade.ratio=blade.length.mm/total.leaf.length.mm)
 ```
 
 
+> **BONUS:**    
+> Créez une nouvelle colonne "late.flowering" qui contient `TRUE` si days.to.bolt est supérieur à 70, et `FALSE` days.to.bolt est inférieur à 70.   
+> *Aide*: Trouvez la solution en utilisant google
+
+```{r}
+# En tapant "mutate tidyverse create new column depending on value other column" dasn google, le 1er site (https://www.marsja.se/r-add-column-to-dataframe-based-on-other-columns-conditions-dplyr/) propose plusieurs solutions pour créer une colonne en fonction des valeurs d'une autre colonne. Voici l'une d'elles qui utilise la fonction mutate():
+
+mutate(expt1, late.flowering=if_else(condition = days.to.bolt>70, TRUE, FALSE))
+
+```
+
+
+
+mutate(C = if_else(A == B, "Equal", "Not Equal"))
 
 <br>
 

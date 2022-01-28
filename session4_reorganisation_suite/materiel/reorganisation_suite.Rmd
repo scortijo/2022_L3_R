@@ -89,10 +89,31 @@ expt1 %>%
 
 
 > **Exercice 1:**
-> Utilisez `%>%` pour faire la suite de sélections suivantes sur`expt1`:
+> Utilisez `%>%` pour faire la suite de sélections suivantes sur `expt1`:
 >
 > - Gardez les plantes qui _ne sont pas_ du background Ler, et qui ont été traitées avec la température fluctuante. 
-> - Ne gardez que les colonnes qui contiennent le génotype, la longueur de "blade" et des information sur le "bolting" (aide: utilisez `contains()`)
+> - Ne gardez que les colonnes qui contiennent le génotype, la longueur de "blade" et des information sur le "bolting" 
+
+<br>
+
+> **BONUS**: Transformez l'enchainement de commandes afin d'utiliser des pipes `%>%` plutôt que objets intermédiaires
+> 
+
+
+
+```{r, message=FALSE}
+
+expt1 <- read_tsv("../data/burghardt_et_al_2015_expt1.txt")
+
+expt1_filtered <- filter(expt1, fluctuation=="Con" & day.length=="16")
+
+expt1_selected <- select(expt1_filtered,days.to.bolt:total.leaf.length.mm)
+
+summary(expt1_selected)
+
+```
+
+
 
 
 
@@ -124,7 +145,7 @@ expt1 %>%
 > Représentez, uniquement pour les plantes qui contiennent le mot "Col" dans le background, et qui ont poussée à 22°C, un box plot de _days.to.bolt_ en fonction du _day.length_, coloré en fonction de la _fluctuation_. Séparez les graphiques pour avoir une facet par _génotype_. Utilisez un thème de type _theme_bw_.
 >
 >
-> Interprétez le résultat: Est-ce que le temps de floraison de certains génotypes est affecté par la fluctuation de température. Si oui lesquels?
+> **Interprétez le résultat** Est-ce que le temps de floraison de certains génotypes est affecté par la fluctuation de température. Si oui lesquels?
 
 
 <br>
@@ -169,8 +190,15 @@ colnames(expt1.cm)
 
 > **Exercice 3:**
 >
-> Créez une nouvelle colonne (blade.ratio) avec le ratio de `blade.length.mm` et `total.leaf.length.mm`
+> Créez une nouvelle colonne "blade.ratio" avec le ratio de `blade.length.mm` et `total.leaf.length.mm`
 >
+
+> **BONUS:**    
+> Créez une nouvelle colonne "late.flowering" qui contient `TRUE` si days.to.bolt est supérieur à 70, et `FALSE` days.to.bolt est inférieur à 70.   
+> *Aide*: Trouvez la solution en utilisant google
+
+
+
 
 <br>
 
@@ -184,7 +212,7 @@ Pour concaténer deux ou plusieurs colonnes ensemble, utilisez la fonction `unit
 
 ```{r}
 # Créez deux nouvelles colonnes
-expt1.concatenated <- unite(expt1, "Vern_survival_bolt",vernalization,survival.bolt,bolt)
+expt1.concatenated <- unite(expt1, "Vern_survival_bolt",vernalization,bolt.survival,bolt)
 
 # Vérifier que la nouvelles colonnes sont bien là
 colnames(expt1.concatenated)
