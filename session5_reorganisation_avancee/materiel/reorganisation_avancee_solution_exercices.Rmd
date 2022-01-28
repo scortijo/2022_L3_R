@@ -92,6 +92,27 @@ group_by(expt1, genotype, day.length) %>%
 
 ```
 
+<br>
+
+> **BONUS**   
+> Calculez chaque `genotype` en fonction de s'ils ont subit ou non une `vernalization`:
+> La moyenne du ratio de `blade.length.mm` et `total.leaf.length.mm`   
+> Le nombre d'observation de chaque groupe   
+> Modifiez la colonne qui contient le nombre d'observations de manière à ajouter "n=" devant la valeur du nombre d'observations
+
+
+```{r}
+
+group_by(expt1, genotype, vernalization) %>% 
+  summarise(average.blade.ratio=mean(blade.length.mm/total.leaf.length.mm, na.rm = TRUE),
+            n.obs=n()) %>% 
+  mutate(n.obs=paste("n=",n.obs))
+  
+  
+
+```
+
+
 
 <br>
 

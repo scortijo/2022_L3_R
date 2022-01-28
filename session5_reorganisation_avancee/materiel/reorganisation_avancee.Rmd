@@ -382,6 +382,13 @@ count(expt1, genotype)
 >
 >
 
+> **BONUS**   
+> Calculez chaque `genotype` en fonction de s'ils ont subit ou non une `vernalization`:
+> La moyenne du ratio de `blade.length.mm` et `total.leaf.length.mm`   
+> Le nombre d'observation de chaque groupe   
+> Modifiez la colonne qui contient le nombre d'observations de manière à ajouter "n=" devant la valeur du nombre d'observations
+
+
 <br>
 
 ## Faire un graphique avec les statistiques descriptives 
