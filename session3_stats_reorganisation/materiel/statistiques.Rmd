@@ -65,13 +65,13 @@ Dans cette partie du cours vous allez découvrir ce qu'est un **test statistique
 La création de connaissances dans le processus de recherche repose sur la **mise à l'épreuve d'hypothèses réfutables**. 
 
 Un des principaux outils d'un chercheur est de formaliser ses questionnements sous forme d'hypothèses, qui seront ensuite confrontées aux données générées pour y répondre.
-En effet, une observation "à l'oeil" des données ou d'un graphique n'est pas une approche objective, reproductible, ni rigoureuse, pour faire des interprêtations biologiques. 
+En effet, une observation "à l’œil" des données ou d'un graphique n'est pas une approche objective, reproductible, ni rigoureuse, pour faire des interprétations biologiques. 
 **Les tests statistiques existent donc afin de fournir des métriques rigoureuses et impartiales aux expérimentateurs pour rejeter ou accepter des hypothèses de recherche.**
 
 
-Imaginons que nous développons un traitement qui est sensé modifier la biomasse des plantes. Nous souhaitons savoir s'il est efficace ou non. Nous mettons donc en place une expérience dans laquelle nous exposons des plantes au traitement et un autre groupe de plantes aux mêmes conditions que les premières, à la différence qu'elles ne reçoivent pas le traitement d'intérêt.
+Imaginons que nous développons un traitement qui est sensé modifier la biomasse des plantes. Nous souhaitons savoir s'il est efficace ou non. Nous mettons donc en place une expérience dans laquelle nous exposons deux groupes de plantes à des conditions contrôlées, de manière à ce que la seule différence entre les deux groupes soit l’application du traitement ou l'application d'un contrôle. 
 
-Sur ces graphes par exemple, il est difficle de dire si le traitement a un réel effet ou si les différences sont uniquement dues à l'éléa, et à la variabilité du phénotype de biomasse entre les plantes :
+Sur les graphes ci-dessous, il est difficile de dire si les traitements ont un réel effet ou si les différences de moyennes sont uniquement dues à l'aléa, et à la variabilité du phénotype de biomasse entre les plantes :
 
 ```{r, echo=FALSE}
 library(ggpubr)
@@ -80,37 +80,37 @@ library(ggpubr)
 ```{r, fig.width=4, echo=FALSE}
 set.seed(116)
 N <- 15
-biomasse <- data.frame(controle = rnorm(n = N, mean = 10, sd = 2),
+biomasse <- data.frame(contrôle = rnorm(n = N, mean = 10, sd = 2),
                        traitement = rnorm(n = N, mean = 14, sd = 2)) %>%
-  pivot_longer(c(controle, traitement), names_to = "Traitement", values_to = "Biomasse")
+  pivot_longer(c(contrôle, traitement), names_to = "Traitement", values_to = "Biomasse")
 
 ggplot(biomasse, aes(x=Traitement, y=Biomasse)) + 
   geom_boxplot(color="darkblue") + xlab("")+
-  geom_jitter(size=3)+theme_pubr() + ggtitle("Cas 1")
+  geom_jitter(size=3)+theme_pubr() + ggtitle("Traitement 1")
 
-biomasse_no_effect <- data.frame(controle = rnorm(n = N, mean = 10, sd = 2),
+biomasse_no_effect <- data.frame(contrôle = rnorm(n = N, mean = 10, sd = 2),
                        traitement = rnorm(n = N, mean = 10, sd = 2)) %>%
-  pivot_longer(c(controle, traitement), names_to = "Traitement", values_to = "Biomasse")
+  pivot_longer(c(contrôle, traitement), names_to = "Traitement", values_to = "Biomasse")
 
 ggplot(biomasse_no_effect, aes(x=Traitement, y=Biomasse)) + 
   geom_boxplot(color="darkred") + 
   geom_jitter(size=3)+xlab("")+
-  theme_pubr()+ ggtitle("Cas 2")
+  theme_pubr()+ ggtitle("Traitement 2")
 ```
 
-Nous pouvons donc tester si l'effet de notre traitement sur la biomasse est **significatif** au moyen d'un test statistique.
+Nous pouvons donc tester si l'effet d'un traitement sur la biomasse est **significatif** au moyen d'un test statistique.
 
-Un test statistique se déroule gloablement en 4 étapes : 
+Un test statistique se déroule globalement en 4 étapes : 
 
 + **Définir une hypothèse nulle : ** cette hypothèse représente souvent l'aléatoire, l'absence d'effet d'un traitement, l'absence de différence entre deux groupes, on la qualifie parfois de l'hypothèse "ennuyeuse". Dans notre cas, il s'agit d'une égalité de moyennes entre nos deux groupes, nous nous plaçons dans le cas ou le traitement n'a pas d'effet sur la biomasse.
 
-+ **Calculer une statistique de test observée : ** il s'agit d'une grandeur calculée sur les données, par exemple la différence de moyenne entre notre groupe traitement et notre groupe controle.
++ **Calculer une statistique de test observée : ** il s'agit d'une grandeur calculée sur les données, par exemple la différence de moyenne entre notre groupe traitement et notre groupe contrôle.
 
-+ **Comparer notre statistique de test observée à la distribution de cette statistique sous l'hypoèse nulle : ** dans notre cas, il faut comparer la différence de moyennes entre traitement et controle à la distribution des écarts de moyennes attendus sous l'hypothèse nulle (une distribution centrée en 0 car pas d'effet traitement). Cela nous permet de calculer une **p-value** : la probabilité d'observer des données au moins aussi extrèmes que les notres sous l'hypothèse nulle. Dans notre exemple, il s'agit de la probabilité d'observer, sous l'hypothèse que le traitement n'a pas d'effet, une telle différence de moyennes.
++ **Comparer notre statistique de test observée à la distribution de cette statistique sous l'hypothèse nulle : ** dans notre cas, il faut comparer la différence de moyennes entre traitement et contrôle à la distribution des écarts de moyennes attendus sous l'hypothèse nulle (une distribution centrée en 0 car pas d'effet traitement). Cela nous permet de calculer une **p-value** : la probabilité d'observer des données au moins aussi extrêmes que les nôtres sous l'hypothèse nulle. Dans notre exemple, il s'agit de la probabilité d'observer, sous l'hypothèse que le traitement n'a pas d'effet, une telle différence de moyennes.
 
-+ **Conclure : ** Si la p-value est très faible alors c'est que nos données sont très improbables sous l'hypothèse nulle, et donc qu'on peut se permettre de rejeter l'hypothèse nulle.  Pour déterminer à partir de quand nous jugeons nos données suffisamment "improbables", on fixe au préalable un seuil à notre test, traditionnellent 5%. Ce seuil établit que si on a moins de 5% de chances d'observer des données aussi extrèmes que les notres sous l'hypothèse nulle, alors on peut rejeter cette hypothèse. Dans notre cas, nous pourrons conclure à une efficacité **significative** du traitement sur la biomasse si la p-value du test est inférieure au seuil fixé.
++ **Conclure : ** Si la p-value est très faible alors c'est que nos données sont très improbables sous l'hypothèse nulle, et donc qu'on peut se permettre de rejeter l'hypothèse nulle.  Pour déterminer à partir de quand nous jugeons nos données suffisamment "improbables", on fixe au préalable un seuil à notre test, traditionnellement 5%. Ce seuil établit que si on a moins de 5% de chances d'observer des données aussi extrêmes que les nôtres sous l'hypothèse nulle, alors on peut rejeter cette hypothèse. Dans notre cas, nous pourrons conclure à une efficacité **significative** du traitement sur la biomasse si la p-value du test est inférieure au seuil fixé.
 
-Visualisaons sur des graphes le calcul des p-values, via les valeurs observées de différences de moyennes de 2 cas. Ces différences de moyennes observées sont comparées à la distribution des écarts de moyennes sous l'hypothèse nulle (pas d'effet traitement) : 
+Visualisons sur des graphes le calcul des p-values, via les valeurs observées de différences de moyennes de 2 cas. Ces différences de moyennes observées sont comparées à la distribution des écarts de moyennes sous l'hypothèse nulle (pas d'effet traitement) : 
 
 ```{r, fig.height=3, echo=FALSE}
 observed_effect <- mean(biomasse[biomasse$Traitement=="traitement",]$Biomasse - biomasse[biomasse$Traitement!="traitement", ]$Biomasse)
@@ -120,9 +120,9 @@ h0 <- rnorm(n=20000, mean=0, sd=1.2)
 df <- data.frame(h0)
 
 density <- ggplot(data = df, aes(x=h0)) + geom_density(fill="grey", alpha = 0.2) + 
-  theme_pubr() +
+  theme_pubr() + xlab("Différence de moyennes") +xlab("Fréquence") +
   geom_vline(xintercept = observed_effect, color="darkblue", size=2)+ 
-  ggtitle("Statistique de tests du cas 1 comparée à la distribution nulle")
+  ggtitle("Statistique de test du traitement 1 comparée à la distribution nulle")
 
 d <- ggplot_build(density)$data[[1]]
 density + 
@@ -131,13 +131,14 @@ density +
 ```
 
 L'aire totale sous cette courbe vaut 1 car il s'agit d'une densité de probabilité, celle de l'écart de moyennes sous l'hypothèse nulle.
-La p-value correspond à l'aire colorée (la probabilité d'avoir une différence de moyenne au moins aussi extrème que nos données par rapport à l'hypothèse nulle). Elle es très faible, inférieure à 5%, car l'écart de moyennes important du cas 1 est assez extraordinaire sous l'hypothèse de non efficacité du traitement.
+La p-value correspond à l'aire colorée (la probabilité d'avoir une différence de moyenne au moins aussi extrême que nos données par rapport à l'hypothèse nulle). Elle est très faible, inférieure à 5%, car l'écart de moyennes important du cas 1 est assez extraordinaire sous l'hypothèse de non efficacité du traitement.
 
 ```{r, fig.height=3, echo=FALSE}
 density <- ggplot(data = df, aes(x=h0)) + geom_density(fill="grey", alpha = 0.2) + 
-  theme_pubr() +
-  geom_vline(xintercept = observed_no_effect, color="darkred", size=2)+ 
-  ggtitle("Statistique de tests du cas 2 comparée à la distribution nulle")
+  theme_pubr() + xlab("Différence de moyennes") +xlab("Fréquence") +
+  geom_vline(xintercept = observed_no_effect, color="darkred", size=2) +
+  geom_vline(xintercept = 2.5, color="grey", size=1)+ 
+  ggtitle("Statistique de test du traitement 2 comparée à la distribution nulle")
 
 d <- ggplot_build(density)$data[[1]]
 density + 
@@ -160,7 +161,7 @@ ggplot(biomasse_no_effect, aes(x=Traitement, y=Biomasse)) +
   theme_pubr() + stat_compare_means(method = "wilcox.test")+ ggtitle("Cas 2")
 ```
 
-**Le cas 1 montre une différence significative due à l'effet du traitement sur la biomasse, alors que le cas 2 non.**
+**Le traitement 1 montre une différence significative due à l'effet du traitement sur la biomasse, alors que le traitement 2 non.**
 
 Le test de comparaison de moyennes réalisé ici est le `wilcox.test`. Comment choisir le test à réaliser suivant nos données?
 
@@ -209,6 +210,10 @@ Quelques lien vers des listes de tests statistiques et leurs cas d'application :
 <br>
 
 Dans ce cours, et ses applications, nous allons uniquement nous concentrer sur des tests de corrélation et de comparaison de moyennes.
+
+
+**Attention : significativité d'un test de comparaison de moyennes ou d'un test de corrélation ne signifie pas qu'il y a causalité entre les deux variables étudiées. Il faut être précautionneux et raisonnable dans les interprétation en fonction de votre plan expérimental.**
+
 <br>
 
 ## Ajouter des résultats de tests statistiques à des graphiques
