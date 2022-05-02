@@ -69,9 +69,9 @@ En effet, une observation "à l’œil" des données ou d'un graphique n'est pas
 **Les tests statistiques existent donc afin de fournir des métriques rigoureuses et impartiales aux expérimentateurs pour rejeter ou accepter des hypothèses de recherche.**
 
 
-Imaginons que nous développons un traitement qui est sensé modifier la biomasse des plantes. Nous souhaitons savoir s'il est efficace ou non. Nous mettons donc en place une expérience dans laquelle nous exposons deux groupes de plantes à des conditions contrôlées, de manière à ce que la seule différence entre les deux groupes soit l’application du traitement ou l'application d'un contrôle. 
+Imaginons que nous voulons savoir quel est l'effet de la longueur du jour (photopériode) sur le nombre de feuilles de rosettes d'Arabidopsis. Nous mettons donc en place une expérience dans laquelle nous exposons deux groupes de plantes à des conditions contrôlées, de manière à ce que la seule différence entre les deux groupes soit la longueur de la journée : jours courts ou jours longs. 
 
-Sur les graphes ci-dessous, il est difficile de dire si les traitements ont un réel effet ou si les différences de moyennes sont uniquement dues à l'aléa, et à la variabilité du phénotype de biomasse entre les plantes :
+Les graphes ci-dessous montrent le nombre de feuilles entre jours courts et jours longs pour deux écotypes différents d'Arabidopsis. Suivant les écotypes, il peut être difficile de dire si la longueur du jour a un réel effet, ou si les différences de moyennes sont uniquement dues à l'aléa, et à la variabilité du phénotype du nombre de feuilles entre les plantes :
 
 ```{r, echo=FALSE}
 library(ggpubr)
@@ -80,41 +80,41 @@ library(ggpubr)
 ```{r, fig.width=4, echo=FALSE}
 set.seed(116)
 N <- 15
-biomasse <- data.frame(contrôle = rnorm(n = N, mean = 10, sd = 2),
-                       traitement = rnorm(n = N, mean = 14, sd = 2)) %>%
-  pivot_longer(c(contrôle, traitement), names_to = "Traitement", values_to = "Biomasse")
+biomasse <- data.frame(Jours_courts = rnorm(n = N, mean = 10, sd = 2),
+                       Jours_longs = rnorm(n = N, mean = 14, sd = 2)) %>%
+  pivot_longer(c(Jours_courts, Jours_longs), names_to = "Traitement", values_to = "Nombre_feuilles")
 
-ggplot(biomasse, aes(x=Traitement, y=Biomasse)) + 
+ggplot(biomasse, aes(x=Traitement, y=Nombre_feuilles)) + 
   geom_boxplot(color="darkblue") + xlab("")+
-  geom_jitter(size=3)+theme_pubr() + ggtitle("Traitement 1")
+  geom_jitter(size=3)+theme_pubr() + ggtitle("Ecotype 1")
 
-biomasse_no_effect <- data.frame(contrôle = rnorm(n = N, mean = 10, sd = 2),
-                       traitement = rnorm(n = N, mean = 10, sd = 2)) %>%
-  pivot_longer(c(contrôle, traitement), names_to = "Traitement", values_to = "Biomasse")
+biomasse_no_effect <- data.frame(Jours_courts = rnorm(n = N, mean = 10, sd = 2),
+                       Jours_longs = rnorm(n = N, mean = 10, sd = 2)) %>%
+  pivot_longer(c(Jours_courts, Jours_longs), names_to = "Traitement", values_to = "Nombre_feuilles")
 
-ggplot(biomasse_no_effect, aes(x=Traitement, y=Biomasse)) + 
+ggplot(biomasse_no_effect, aes(x=Traitement, y=Nombre_feuilles)) + 
   geom_boxplot(color="darkred") + 
   geom_jitter(size=3)+xlab("")+
-  theme_pubr()+ ggtitle("Traitement 2")
+  theme_pubr()+ ggtitle("Ecotype 2")
 ```
 
-Nous pouvons donc tester si l'effet d'un traitement sur la biomasse est **significatif** au moyen d'un test statistique.
+Nous pouvons donc tester si l'effet de la photopériode sur le nombre de feuilles est **significatif** au moyen d'un test statistique.
 
 Un test statistique se déroule globalement en 4 étapes : 
 
-+ **Définir une hypothèse nulle : ** cette hypothèse représente souvent les effets aléatoires, l'absence d'effet d'un traitement, l'absence de différence entre deux groupes, on la qualifie parfois de l'hypothèse "ennuyeuse". Dans notre cas, il s'agit d'une égalité de moyennes entre nos deux groupes, nous nous plaçons dans le cas ou le traitement n'a pas d'effet sur la biomasse.
++ **Définir une hypothèse nulle : ** cette hypothèse représente souvent les effets aléatoires, l'absence d'effet d'un traitement, l'absence de différence entre deux groupes, on la qualifie parfois de l'hypothèse "ennuyeuse". Dans notre cas, il s'agit d'une égalité de moyennes entre nos deux groupes, nous nous plaçons dans le cas ou la longueur de jour n'a pas d'effet sur le nombre de feuilles.
 
-+ **Calculer une statistique de test observée : ** il s'agit d'une grandeur calculée sur les données, par exemple la différence de moyenne entre notre groupe traitement et notre groupe contrôle.
++ **Calculer une statistique de test observée : ** il s'agit d'une grandeur calculée sur les données, par exemple la différence de moyenne entre les deux longueurs de jours.
 
-+ **Comparer notre statistique de test observée à la distribution de cette statistique sous l'hypothèse nulle : ** dans notre cas, il faut comparer la différence de moyennes entre traitement et contrôle à la distribution des écarts de moyennes attendus sous l'hypothèse nulle (une distribution centrée en 0 car pas d'effet traitement). Cela nous permet de calculer une **p-value** : la probabilité d'observer des données au moins aussi extrêmes que les nôtres sous l'hypothèse nulle. Dans notre exemple, il s'agit de la probabilité d'observer, sous l'hypothèse que le traitement n'a pas d'effet, une telle différence de moyennes.
++ **Comparer notre statistique de test observée à la distribution de cette statistique sous l'hypothèse nulle : ** dans notre cas, il faut comparer la différence de moyennes entre jours courts et jours longs à la distribution des écarts de moyennes attendus sous l'hypothèse nulle (une distribution centrée en 0 car pas d'effet photopériode). Cela nous permet de calculer une **p-value** : la probabilité d'observer des données au moins aussi extrêmes que les nôtres sous l'hypothèse nulle. Dans notre exemple, il s'agit de la probabilité d'observer, sous l'hypothèse que la photopériode n'a pas d'effet, une telle différence de moyennes.
 
-+ **Conclure : ** Si la p-value est très faible alors c'est que nos données sont très improbables sous l'hypothèse nulle, et donc qu'on peut se permettre de rejeter l'hypothèse nulle.  Pour déterminer à partir de quand nous jugeons nos données suffisamment "improbables", on fixe au préalable un seuil à notre test, traditionnellement 5%. Ce seuil établit que si on a moins de 5% de chances d'observer des données aussi extrêmes que les nôtres sous l'hypothèse nulle, alors on peut rejeter cette hypothèse. Dans notre cas, nous pourrons conclure à une efficacité **significative** du traitement sur la biomasse si la p-value du test est inférieure au seuil fixé.
++ **Conclure : ** Si la p-value est très faible alors c'est que nos données sont très improbables sous l'hypothèse nulle, et donc qu'on peut se permettre de rejeter l'hypothèse nulle.  Pour déterminer à partir de quand nous jugeons nos données suffisamment "improbables", on fixe au préalable un seuil à notre test, traditionnellement 5%. Ce seuil établit que si on a moins de 5% de chances d'observer des données aussi extrêmes que les nôtres sous l'hypothèse nulle, alors on peut rejeter cette hypothèse. Dans notre cas, nous pourrons conclure à un effet **significative** de la longueur du jour sur le nombre de feuilles si la p-value du test est inférieure au seuil fixé.
 
-Visualisons sur des graphes le calcul des p-values, via les valeurs observées de différences de moyennes de 2 cas. Ces différences de moyennes observées sont comparées à la distribution des écarts de moyennes sous l'hypothèse nulle (pas d'effet traitement) : 
+Visualisons sur des graphes le calcul des p-values, via les valeurs observées de différences de moyennes pour les 2 écotypes. Ces différences de moyennes observées sont comparées à la distribution des écarts de moyennes sous l'hypothèse nulle (pas d'effet photopériode) : 
 
 ```{r, fig.height=3, echo=FALSE}
-observed_effect <- mean(biomasse[biomasse$Traitement=="traitement",]$Biomasse - biomasse[biomasse$Traitement!="traitement", ]$Biomasse)
-observed_no_effect <- mean(biomasse_no_effect[biomasse_no_effect$Traitement=="traitement",]$Biomasse - biomasse_no_effect[biomasse_no_effect$Traitement!="traitement", ]$Biomasse)
+observed_effect <- mean(biomasse[biomasse$Traitement=="Jours_longs",]$Nombre_feuilles - biomasse[biomasse$Traitement!="Jours_longs", ]$Nombre_feuilles)
+observed_no_effect <- mean(biomasse_no_effect[biomasse_no_effect$Traitement=="Jours_longs",]$Nombre_feuilles - biomasse_no_effect[biomasse_no_effect$Traitement!="Jours_longs", ]$Nombre_feuilles)
 
 h0 <- rnorm(n=20000, mean=0, sd=1.2)
 df <- data.frame(h0)
@@ -123,7 +123,7 @@ density <- ggplot(data = df, aes(x=h0)) + geom_density(fill="grey", alpha = 0.2)
   theme_pubr() + xlab("Différence de moyennes") +xlab("Fréquence") +
   geom_vline(xintercept = observed_effect, color="darkblue", size=2)+ 
   geom_vline(xintercept = 2.5, color="grey", size=1)+ 
-  ggtitle("Statistique de test du traitement 1 comparée à la distribution nulle")
+  ggtitle("Statistique de test chez l'écotype 1 comparée à la distribution nulle")
 
 d <- ggplot_build(density)$data[[1]]
 density + 
@@ -132,14 +132,15 @@ density +
 ```
 
 L'aire totale sous cette courbe vaut 1 car il s'agit d'une densité de probabilité, celle de l'écart de moyennes sous l'hypothèse nulle.
-La p-value correspond à l'aire colorée (la probabilité d'avoir une différence de moyenne au moins aussi extrême que nos données par rapport à l'hypothèse nulle). Elle est très faible, inférieure à 5%, car l'écart de moyennes important du cas 1 est assez extraordinaire sous l'hypothèse de non efficacité du traitement.
+Le trait vertical gris correspond à une valeur de différence de moyenne qui donnerait une p-value de 5%.
+La p-value correspond à l'aire colorée (la probabilité d'avoir une différence de moyennes au moins aussi extrême que nos données par rapport à l'hypothèse nulle). Elle est très faible, inférieure à 5%, car l'écart de moyennes important du cas 1 est assez extraordinaire sous l'hypothèse de non efficacité du traitement.
 
 ```{r, fig.height=3, echo=FALSE}
 density <- ggplot(data = df, aes(x=h0)) + geom_density(fill="grey", alpha = 0.2) + 
   theme_pubr() + xlab("Différence de moyennes") +xlab("Fréquence") +
   geom_vline(xintercept = observed_no_effect, color="darkred", size=2) +
   geom_vline(xintercept = 2.5, color="grey", size=1)+ 
-  ggtitle("Statistique de test du traitement 2 comparée à la distribution nulle")
+  ggtitle("Statistique de test chez l'écotype 2 comparée à la distribution nulle")
 
 d <- ggplot_build(density)$data[[1]]
 density + 
@@ -148,32 +149,32 @@ density +
 ```
 
 
-Ici, la p-value représentée par l'aire colorée a une valeur plus forte, suppérieure à notre seuil de 5%, donc on ne pourra pas rejeter l'hypothèse que le traitement n'a pas d'effet.
+Ici, la p-value représentée par l'aire colorée a une valeur plus forte, suppérieure à notre seuil de 5%, donc on ne pourra pas rejeter l'hypothèse que la photopériode n'a pas d'effet.
 Si on rajoute une p-value aux graphes présentés plus haut, on obtient :
 
 ```{r, fig.width=4, echo=FALSE}
-ggplot(biomasse, aes(x=Traitement, y=Biomasse)) + 
+ggplot(biomasse, aes(x=Traitement, y=Nombre_feuilles)) + 
   geom_boxplot(color="darkblue") + xlab("")+
-  geom_jitter(size=3)+theme_pubr() + stat_compare_means(method = "wilcox.test") + ggtitle("Cas 1")
+  geom_jitter(size=3)+theme_pubr() + stat_compare_means(method = "wilcox.test") + ggtitle("Ecotype 1")
 
-ggplot(biomasse_no_effect, aes(x=Traitement, y=Biomasse)) + 
+ggplot(biomasse_no_effect, aes(x=Traitement, y=Nombre_feuilles)) + 
   geom_boxplot(color="darkred") + 
   geom_jitter(size=3)+xlab("")+
-  theme_pubr() + stat_compare_means(method = "wilcox.test")+ ggtitle("Cas 2")
+  theme_pubr() + stat_compare_means(method = "wilcox.test")+ ggtitle("Ecotype 2")
 ```
 
-**Le traitement 1 montre une différence significative due à l'effet du traitement sur la biomasse, alors que le traitement 2 non.**
+**L'écotype 1 est sensible à une différence de photopériode de manière significative, alors que l'écotype 2 ne semble pas l'être.**
 
 Le test de comparaison de moyennes réalisé ici est le `wilcox.test`. Comment choisir le test à réaliser suivant nos données?
 
 
 ### Choisir un test statistique
 
-Suivant le type des données et les hypothèses que l'on peut vérifier sur les données, il faut choisir un test statistique adapté.
+Suivant le type des données et les hypothèses que l'on peut vérifier sur les données, il faut choisir un test statistique adapté. Globalement, il existe deux types de tests : les **paramétriques** (qui requirent de vérifier un certain nombre d'hypothèses sur les données) et les tests **non paramétriques** (qui ne sont pas soumis à la vérification d'hypothèses, mais au détriment d'une perte de puissance statistique, c'est à dire la capacité du test à détecter un effet lorsqu'il y en a bien un).
 
-**Cas d'une variable quantitative et d'une variable qualitative**:
+**Cas d'une variable numérique (c'est à dire quantitative) et d'une variable catégorielle (c'est à dire qualitative)**:
 
-+ Si on a deux groupes pour lesquels on a mesuré une grandeur quantitative, on peut réaliser un test de comparaison de moyennes. Son hypothèse nulle est que les moyennes des deux groupes sont égales.
++ Si on a deux groupes pour lesquels on a mesuré une grandeur numérique (quantitative), on peut réaliser un test de comparaison de moyennes. Son hypothèse nulle est que les moyennes des deux groupes sont égales.
 Si la p-value est significative, cela veut dire que les 2 groupes ont des moyennes significativement différentes.
 Usuellement, c'est le **T-test** qui est utilisé, un test paramétrique de comparaison de moyennes.
 Si les échantillons sont de petite taille, que les données ne suivent pas une loi normale, ou que les variances des groupes ont l'air trop différentes, les hypothèses du T-test ne sont pas respectées et on utilisera plutôt son alternative non paramétrique, le **Wilcox-test**.
@@ -188,11 +189,11 @@ Si les échantillons sont de petite taille, que les données ne suivent pas une 
 *Note : on peut vérifier la normalité des données au moyen du test de shapiro : * `shapiro.test()`
 
 
-**Cas de deux variables quantitatives**:
+**Cas de deux variables numériques (quantitatives)**:
 
 On pourrait par exemple vouloir tester l'effet de la teneur en nitrate, une valeur continue, sur la biomasse des plantes. 
-Dans ce cas là, on peut tester si le coefficent de corrélation calculé entre ces deux variables est significatif ou non. 
-La p-value de ce test permet de rejeter ou non l'hypothèse nulle, qui est l'absence de corrélation entre les deux variables.
+Dans ce cas là, on peut tester si le coefficent de corrélation calculé entre ces deux variables est significatif ou non. Le coefficient de corrélation $R$, avec $-1 \leq R \leq 1$, quantifie la force de la relation entre deux variables. Plus la valeur absolue de $R$ est grande, plus les variables sont corrélées, et auront tendance à toujours évoluer conjointement. Si $R<0$, les deux variables ont une relation inverse. 
+La p-value de ce test permet de rejeter ou non l'hypothèse nulle, qui est l'absence de corrélation entre les deux variables ($R=0$).
 
 *Note: Il existe les coeffcients de corrélation de `pearson` (paramétrique, pour des données normales ou de grande taille) ou de `spearman` (pour des données non normales et avec une faible taille d'échantillon)*. Il convient d'utiliser la méthode la plus adaptée en fonction des données.
 
@@ -212,8 +213,14 @@ Quelques lien vers des listes de tests statistiques et leurs cas d'application :
 
 Dans ce cours, et ses applications, nous allons uniquement nous concentrer sur des tests de corrélation et de comparaison de moyennes.
 
+### Bien utiliser un test statistique
 
-**Attention : significativité d'un test de comparaison de moyennes ou d'un test de corrélation ne signifie pas qu'il y a causalité entre les deux variables étudiées. Il faut être précautionneux et raisonnable dans les interprétation en fonction de votre plan expérimental.**
+Une fois que vous connaissez le test à utiliser suivant la nature des données, que vous avez vérifié ses hypothèses, restez très vigilants à plusieurs points : 
+
++ **Le nombre d'observations** est un élément crucial pour un test. Si le nombre d'observations est trop faible, la puissance statistique du test est très basse (c'est à dire sa capacité à détecter un effet lorsqu'il y en a bien un). Des tests sur faibles effectifs sont donc difficiles voire impossible à interprêter. Dancs ces cas là est plutôt conseillé de ne pas faire d'interprêtations fortes, mais plutôt de refaire des expériences pour augmenter le nombre d'observations.
+
++ **La significativité d'un test de comparaison de moyennes ou d'un test de corrélation ne signifie pas qu'il y a causalité entre les deux variables étudiées**. Il faut être précautionneux et raisonnable dans les interprétation en fonction de votre plan expérimental.
+
 
 <br>
 
