@@ -149,7 +149,7 @@ density +
 ```
 
 
-Ici, la p-value représentée par l'aire colorée a une valeur plus forte, suppérieure à notre seuil de 5%, donc on ne pourra pas rejeter l'hypothèse que la photopériode n'a pas d'effet.
+Ici, la p-value représentée par l'aire colorée a une valeur plus forte, supérieure à notre seuil de 5%, donc on ne pourra pas rejeter l'hypothèse que la photopériode n'a pas d'effet.
 Si on rajoute une p-value aux graphes présentés plus haut, on obtient :
 
 ```{r, fig.width=4, echo=FALSE}
@@ -191,10 +191,10 @@ Si les échantillons sont de petite taille, que les données ne suivent pas une 
 **Cas de deux variables numériques (quantitatives)**:
 
 On pourrait par exemple vouloir tester l'effet de la teneur en nitrate, une valeur continue, sur la biomasse des plantes. 
-Dans ce cas là, on peut tester si le coefficent de corrélation calculé entre ces deux variables est significatif ou non. Le coefficient de corrélation $R$, avec $-1 \leq R \leq 1$, quantifie la force de la relation entre deux variables. Plus la valeur absolue de $R$ est grande, plus les variables sont corrélées, et auront tendance à toujours évoluer conjointement. Si $R<0$, les deux variables ont une relation inverse. 
+Dans ce cas là, on peut tester si le coefficient de corrélation calculé entre ces deux variables est significatif ou non. Le coefficient de corrélation $R$, avec $-1 \leq R \leq 1$, quantifie la force de la relation entre deux variables. Plus la valeur absolue de $R$ est grande, plus les variables sont corrélées, et auront tendance à toujours évoluer conjointement. Si $R<0$, les deux variables ont une relation inverse. 
 La p-value de ce test permet de rejeter ou non l'hypothèse nulle, qui est l'absence de corrélation entre les deux variables ($R=0$).
 
-*Note: Il existe les coeffcients de corrélation de `pearson` (paramétrique, pour des données normales ou de grande taille) ou de `spearman` (pour des données non normales et avec une faible taille d'échantillon)*. Il convient d'utiliser la méthode la plus adaptée en fonction des données.
+*Note: Il existe les coefficients de corrélation de `pearson` (paramétrique, pour des données normales ou de grande taille) ou de `spearman` (pour des données non normales et avec une faible taille d'échantillon)*. Il convient d'utiliser la méthode la plus adaptée en fonction des données.
 
 **Autres cas**:
 
@@ -216,7 +216,7 @@ Dans ce cours, et ses applications, nous allons uniquement nous concentrer sur d
 
 Une fois que vous connaissez le test à utiliser suivant la nature des données, que vous avez vérifié ses hypothèses, restez très vigilants à plusieurs points : 
 
-+ **Le nombre d'observations** est un élément crucial pour un test. Si le nombre d'observations est trop faible, la puissance statistique du test est très basse (c'est à dire sa capacité à détecter un effet lorsqu'il y en a bien un). Des tests sur faibles effectifs sont donc difficiles voire impossible à interprêter. Dancs ces cas là est plutôt conseillé de ne pas faire d'interprêtations fortes, mais plutôt de refaire des expériences pour augmenter le nombre d'observations.
++ **Le nombre d'observations** est un élément crucial pour un test. Si le nombre d'observations est trop faible, la puissance statistique du test est très basse (c'est à dire sa capacité à détecter un effet lorsqu'il y en a bien un). Des tests sur faibles effectifs sont donc difficiles voire impossible à interpréter. Dans ces cas là est plutôt conseillé de ne pas faire d’interprétations fortes, mais plutôt de refaire des expériences pour augmenter le nombre d'observations.
 
 + **La significativité d'un test de comparaison de moyennes ou d'un test de corrélation ne signifie pas qu'il y a causalité entre les deux variables étudiées**. Il faut être précautionneux et raisonnable dans les interprétation en fonction de votre plan expérimental.
 
