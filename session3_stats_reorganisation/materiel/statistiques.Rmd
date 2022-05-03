@@ -120,7 +120,7 @@ h0 <- rnorm(n=20000, mean=0, sd=1.2)
 df <- data.frame(h0)
 
 density <- ggplot(data = df, aes(x=h0)) + geom_density(fill="grey", alpha = 0.2) + 
-  theme_pubr() + xlab("Différence de moyennes") +xlab("Fréquence") +
+  theme_pubr() + xlab("Différence de moyennes") +ylab("Fréquence") +
   geom_vline(xintercept = observed_effect, color="darkblue", size=2)+ 
   geom_vline(xintercept = 2.5, color="grey", size=1)+ 
   ggtitle("Statistique de test chez l'écotype 1 comparée à la distribution nulle")
@@ -137,7 +137,7 @@ La p-value correspond à l'aire colorée (la probabilité d'avoir une différenc
 
 ```{r, fig.height=3, echo=FALSE}
 density <- ggplot(data = df, aes(x=h0)) + geom_density(fill="grey", alpha = 0.2) + 
-  theme_pubr() + xlab("Différence de moyennes") +xlab("Fréquence") +
+  theme_pubr() + xlab("Différence de moyennes") +ylab("Fréquence") +
   geom_vline(xintercept = observed_no_effect, color="darkred", size=2) +
   geom_vline(xintercept = 2.5, color="grey", size=1)+ 
   ggtitle("Statistique de test chez l'écotype 2 comparée à la distribution nulle")
@@ -178,7 +178,6 @@ Suivant le type des données et les hypothèses que l'on peut vérifier sur les 
 Si la p-value est significative, cela veut dire que les 2 groupes ont des moyennes significativement différentes.
 Usuellement, c'est le **T-test** qui est utilisé, un test paramétrique de comparaison de moyennes.
 Si les échantillons sont de petite taille, que les données ne suivent pas une loi normale, ou que les variances des groupes ont l'air trop différentes, les hypothèses du T-test ne sont pas respectées et on utilisera plutôt son alternative non paramétrique, le **Wilcox-test**.
-
 
 
 + Si on a plus de deux groupes, on peut réaliser une analyse de la variance. Son hypothèse nulle est que les moyennes de tous les groupes sont les mêmes.
