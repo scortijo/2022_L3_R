@@ -10,6 +10,11 @@
 ## Description
 
 Ce cours va vous apprendre comment explorer des données et réaliser des graphiques dans **R**. 
+
+Afin de pouvoir faire ce cours sur votre ordinateur, téléchargez le matériel du cours en cliquant sur ![](logo_download.png){width=10%} et dézippez le dossier téléchargé. Ce dossier contient les données ainsi que le matériel vous permettant de mettre en pratique le cours et de faire les exercices.
+
+
+
 Les différentes séances sont (avec accès au cours):
 
 
