@@ -23,7 +23,7 @@ Ceci est la partie correspondant à la séance 2 du contrôle continu qui combin
 <br>
 
 
-- Reprendre le script R `Script_controle_continue1_numéro_étudiant.R` (avec votre votre propre numéro à la place de `numéro_étudiant`) que vous avez créé dans le devoir de la séance précédente.
+- Reprenez le script R `Script_controle_continue1_numéro_étudiant.R` (avec votre votre propre numéro à la place de `numéro_étudiant`) que vous avez créé dans le devoir de la séance précédente.
 
 
 <br>
