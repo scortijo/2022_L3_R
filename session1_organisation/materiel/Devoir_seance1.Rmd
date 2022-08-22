@@ -1,0 +1,25 @@
+---
+title: "Devoir_seance1"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+  pdf_document:
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+[Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
+
+Ceci est la première partie du contrôle continue qui combinera les exercices à faire entre les séances.
+
+
+
+
+
+
+
