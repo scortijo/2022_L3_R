@@ -15,10 +15,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
 
-Ceci est la première partie du contrôle continue qui combinera les exercices à faire entre les séances.
+Ceci est la première partie du contrôle continu qui combinera les exercices à faire entre les séances.
 
 
 
+- Organiser un de vos tableur excel avec les colonnes qui contiennent  les variables (ce qui est mesuré) et les lignes qui contiennent les observations (les unités de l'étude). Sauvez le en format `.txt` avec les colonnes séparées par _tabulation_
+
+- Importez vos données (sauvées au format `.txt`)  dans R
+
+*Pour ceux qui n'ont pas de données, vous pouvez utiliser le tableau _Pan_Rui_2017_flowering time_raw_data.xlsx_ ([publié par Pan et Rui](https://doi.org/10.6084/m9.figshare.5675032.v1)) dans le dossier _data_ *
 
 
 
