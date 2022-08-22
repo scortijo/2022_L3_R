@@ -1524,11 +1524,26 @@ div.tocify {
 
 <p><a href="https://scortijo.github.io/2022_L3_R/">Retour à la page d’accueil</a></p>
 <p>Ceci est la première partie du contrôle continu qui combinera les exercices à faire entre les séances.</p>
+<p><strong>!Attention! Vous devez tout d’abord installer R et R studio en utilisant les instructions sur <a href="https://scortijo.github.io/2022_L3_R/">la page d’accueil</a></strong></p>
+<p><br></p>
+<p>Une fois R et R studio installés, voici la première partie du contrôle continu:</p>
+<p><br></p>
 <ul>
-<li><p>Organiser un de vos tableur excel avec les colonnes qui contiennent les variables (ce qui est mesuré) et les lignes qui contiennent les observations (les unités de l’étude). Sauvez le en format <code>.txt</code> avec les colonnes séparées par <em>tabulation</em></p></li>
-<li><p>Importez vos données (sauvées au format <code>.txt</code>) dans R</p></li>
+<li>Créez un nouveau script R que vous sauvez immediatement sous le nom de <code>Script_controle_continue1_numéro_étudiant.R</code> en remplaçant <code>numéro_étudiant</code> par votre propre numéro.</li>
 </ul>
-<p><em>Pour ceux qui n’ont pas de données, vous pouvez utiliser le tableau <em>Pan_Rui_2017_flowering time_raw_data.xlsx</em> (<a href="https://doi.org/10.6084/m9.figshare.5675032.v1">publié par Pan et Rui</a>) dans le dossier <em>data</em> </em></p>
+<p><br></p>
+<ul>
+<li>Chargez le package <code>tidyverse</code>(en utilisant <code>library()</code>)</li>
+</ul>
+<p><br></p>
+<ul>
+<li>Définissez votre répertoire de travail dans le dossier <code>session1_organisations</code> (en utilisant <code>setwd()</code>)</li>
+</ul>
+<p><br></p>
+<ul>
+<li>Importez le tableau <code>Pan_Rui_2017_flowering_time_raw_data.txt</code> en utilisant la bonne fonction et gardez le dans un l’objet <code>flowering_data</code>.</li>
+</ul>
+<p><em>Aide: le fichier est au format <code>.txt</code> avec les colonnes séparées par une tabulation.</em></p>
 
 
 

@@ -101,9 +101,11 @@ Les différentes séances sont (avec accès au cours):
 
 ## Modalités d'évaluation
 
-*L'évaluation de cette matière va comporter:*
-*1. Un contrôle continu qui combine les exercices à faire entre les séances sur votre ordinateur personnel*
-*2. Un devoir en classe lors de la dernière séance*
+**L'évaluation de cette matière va comporter:**
+
+**1. Un contrôle continu qui combine les exercices à faire entre les séances sur votre ordinateur personnel**
+
+**2. Un devoir en classe lors de la dernière séance**
 
 <br>
 

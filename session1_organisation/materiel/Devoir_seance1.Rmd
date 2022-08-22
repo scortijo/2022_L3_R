@@ -17,13 +17,31 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Ceci est la première partie du contrôle continu qui combinera les exercices à faire entre les séances.
 
+**!Attention! Vous devez tout d'abord installer R et R studio en utilisant les instructions sur [la page d'accueil](https://scortijo.github.io/2022_L3_R/)**
+
+<br>
+
+Une fois R et R studio installés, voici la première partie du contrôle continu:
+
+<br>
+
+- Créez un nouveau script R que vous sauvez immediatement sous le nom de `Script_controle_continue1_numéro_étudiant.R` en remplaçant `numéro_étudiant` par votre propre numéro.
+
+<br>
+
+- Chargez le package `tidyverse`(en utilisant `library()`)
+
+<br>
+
+- Définissez votre répertoire de travail dans le dossier `session1_organisations`  (en utilisant `setwd()`)
+
+<br>
+
+- Importez le tableau `Pan_Rui_2017_flowering_time_raw_data.txt` en utilisant la bonne fonction et gardez le dans un l'objet `flowering_data`. 
+
+*Aide: le fichier est au format `.txt` avec les colonnes séparées par une tabulation.*
 
 
-- Organiser un de vos tableur excel avec les colonnes qui contiennent  les variables (ce qui est mesuré) et les lignes qui contiennent les observations (les unités de l'étude). Sauvez le en format `.txt` avec les colonnes séparées par _tabulation_
-
-- Importez vos données (sauvées au format `.txt`)  dans R
-
-*Pour ceux qui n'ont pas de données, vous pouvez utiliser le tableau _Pan_Rui_2017_flowering time_raw_data.xlsx_ ([publié par Pan et Rui](https://doi.org/10.6084/m9.figshare.5675032.v1)) dans le dossier _data_ *
 
 
 
