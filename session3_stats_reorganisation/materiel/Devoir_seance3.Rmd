@@ -1,0 +1,41 @@
+---
+title: "Devoir séance 3"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+  pdf_document:
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+[Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
+
+<br>
+
+Ceci est la partie correspondant à la séance 3 du contrôle continu qui combinera les exercices à faire entre les séances. Pour cela:
+
+
+- Reprenez le script R `Script_controle_continue1_numéro_étudiant.R` (avec votre votre propre numéro à la place de `numéro_étudiant`) que vous avez sauvé dans le devoir de la séance précédente.
+
+<br>
+
+- Chargez la librairie `ggpubr`
+
+<br>
+
+- Ajoutez au boxplot (qui est à la fin de votre script) le résultat d'un test de comparaison de moyennes pour définir si le temps de floraison est affecté par le traitement avec le champignon.
+
+<br>
+
+- Select
+
+
+- Filter
+
+
+

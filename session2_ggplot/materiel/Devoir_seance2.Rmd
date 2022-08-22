@@ -15,6 +15,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
 
+<br>
+
 Ceci est la partie correspondant à la séance 2 du contrôle continu qui combinera les exercices à faire entre les séances. Pour cela:
 
 
@@ -33,6 +35,14 @@ Ceci est la partie correspondant à la séance 2 du contrôle continu qui combin
 
 
 - Effectuez un boxplot du temps de `Flowering_time_days` (axe y), en fonction du `Genotype` (axe x), avec les boxplots colorés en fonction de `Treatment`
+
+
+<br>
+
+- C'est fini. N'oubliez pas de sauver votre fichier que vous réutiliserez pour le reste du contrôle continu.
+
+<br>
+
 
 
 
