@@ -102,12 +102,12 @@ Les différentes séances sont (avec accès au cours):
 ## Modalités d'évaluation
 
 *L'évaluation de cette matière va comporter:*
-*1. Un contrôle continu qui combine les exercices à faire entre les séances*
+*1. Un contrôle continu qui combine les exercices à faire entre les séances sur votre ordinateur personnel*
 *2. Un devoir en classe lors de la dernière séance*
 
 <br>
 
-## Si vous voulez utiliser R chez vous: 
+## Pour utiliser R chez vous: 
 Il est recommandé d'utiliser R régulièrement pour bien comprendre et apprendre. Pour cela le mieux est d'installer **R** et **R studio** sur votre ordinateur:
 
 [Installer R](https://cran.biotools.fr/)
