@@ -1,5 +1,5 @@
 ---
-title: "Devoir_seance1"
+title: "Devoir_séance1"
 output:
   html_document:
     toc: yes
@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
 
-Ceci est la première partie du contrôle continu qui combinera les exercices à faire entre les séances.
+Ceci est la début du contrôle continu qui combinera les exercices à faire entre les séances.
 
 **!Attention! Vous devez tout d'abord installer R et R studio en utilisant les instructions sur [la page d'accueil](https://scortijo.github.io/2022_L3_R/)**
 

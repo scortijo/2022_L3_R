@@ -1,0 +1,42 @@
+---
+title: "Devoir séance 2"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+  pdf_document:
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+[Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
+
+Ceci est la partie correspondant à la séance 2 du contrôle continu qui combinera les exercices à faire entre les séances. Pour cela:
+
+
+<br>
+
+
+- Reprendre le script R `Script_controle_continue1_numéro_étudiant.R` (avec votre votre propre numéro à la place de `numéro_étudiant`) que vous avez créé dans le devoir de la séance précédente.
+
+
+<br>
+
+- En utilisant une ou plusieurs fonctions vues lors de la deuxième séance, déterminez le nombre de lignes et de colonnes de votre objet `flowering_data` contenant les données du tableau `Pan_Rui_2017_flowering_time_raw_data.txt`. 
+
+
+<br>
+
+
+- Effectuez un boxplot du temps de `Flowering_time_days` (axe y), en fonction du `Genotype` (axe x), avec les boxplots colorés en fonction de `Treatment`
+
+
+
+
+
+
+
