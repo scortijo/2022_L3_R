@@ -41,6 +41,10 @@ Une fois R et R studio installés, voici la première partie du contrôle contin
 
 *Aide: le fichier est au format `.txt` avec les colonnes séparées par une tabulation.*
 
+<br>
+
+Vous pouvez trouver plus d'information sur le jeu de données dans cet article de [Pan et al., 2017](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0189791).
+Dans le fichier la colonne `Genotype` contient le nom des accessions d'Arabidopsis utilisées. La colonne `Treatment` indique si les plantes ont été traitées avec le champignon *Piriformospora indica*. La colonne `Flowering_time_days` indique le nombre de jours pour que les plantes arrivent à floraison. Quinze plantes ont été mesurées pour chaque traitement sur chaque génotype.
 
 
 
