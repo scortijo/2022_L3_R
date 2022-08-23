@@ -34,7 +34,7 @@ Ceci est la partie correspondant à la séance 2 du contrôle continu qui combin
 <br>
 
 
-- Effectuez un boxplot du temps de `Flowering_time_days` (axe y), en fonction du `Genotype` (axe x), avec les boxplots colorés en fonction de `Treatment`
+- Effectuez un boxplot du temps de `Flowering_time_days` (axe y), en fonction du `Genotype` (axe x), avec l'intérieur des boxplots colorés en fonction de `Treatment`
 
 
 <br>
