@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Ceci est la partie correspondant à la séance 3 du contrôle continu qui combinera les exercices à faire entre les séances. Pour cela:
 
 
-- Reprenez le script R `Script_controle_continue1_numéro_étudiant.R` (avec votre votre propre numéro à la place de `numéro_étudiant`) que vous avez sauvé dans le devoir de la séance précédente.
+- Reprenez le script R `Script_controle_continu1_numéro_étudiant.R` (avec votre votre propre numéro à la place de `numéro_étudiant`) que vous avez sauvé dans le devoir de la séance précédente.
 
 <br>
 
@@ -28,19 +28,19 @@ Ceci est la partie correspondant à la séance 3 du contrôle continu qui combin
 
 <br>
 
-- Ajoutez au boxplot (qui est à la fin de votre script) le résultat d'un test de comparaison de moyennes pour définir si le temps de floraison est affecté par le traitement avec le champignon.
+- Ajoutez au boxplot (qui est à la fin de votre script) le résultat d'un test de comparaison de moyennes entre les deux traitements. Formulez une interprêtation à propos de l'effet du champignon *Piriformospora indica* sur le temps de floraison d'Arabidopsis.
 
 <br>
 
-- Avec l'une des fonctions que nous avons vu dans la deuxième partie du cours, selectionnez toutes les colonnes de l'objet `flowering_data` sauf la colonne `Plant`.
+- Avec l'une des fonctions que nous avons vue dans la deuxième partie du cours, selectionnez toutes les colonnes de l'objet `flowering_data` sauf la colonne `Plant`.
 
 <br>
 
-- Avec une autre fonction que nous avons vu dans la deuxième partie du cours, gardez uniquement les lignes de l'objet `flowering_data` qui sont du `Genotype` `Ler`.
+- Avec une autre fonction que nous avons vue dans la deuxième partie du cours, gardez uniquement les lignes de l'objet `flowering_data` qui sont du `Genotype` `Ler`.
 
 <br>
 
-**C'est fini. N'oubliez pas de sauver votre fichier. Le script contenant tous les exercices à faire entre les séances 1, 2 et 3 est la première moitié du contrôle continue et doit être déposé sur Moodle au plus tard le xxx.**
+**C'est fini. N'oubliez pas de sauver votre fichier. Le script contenant tous les exercices à faire entre les séances 1, 2 et 3 est la première moitié du contrôle continu et doit être déposé sur Moodle au plus tard le xxx.**
 
 <br>
 
