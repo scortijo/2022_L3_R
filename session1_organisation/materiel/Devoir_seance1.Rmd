@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
 
-Ceci est la début du contrôle continu qui combinera les exercices à faire entre les séances.
+Ceci est le début du contrôle continu qui combinera les exercices à faire entre les séances.
 
 **!Attention! Vous devez tout d'abord installer R et R studio en utilisant les instructions sur [la page d'accueil](https://scortijo.github.io/2022_L3_R/)**
 
@@ -25,7 +25,7 @@ Une fois R et R studio installés, voici la première partie du contrôle contin
 
 <br>
 
-- Créez un nouveau script R que vous sauvez immediatement sous le nom de `Script_controle_continue1_numéro_étudiant.R` en remplaçant `numéro_étudiant` par votre propre numéro.
+- Créez un nouveau script R que vous sauvez immediatement sous le nom de `Script_controle_continu1_numéro_étudiant.R` en remplaçant `numéro_étudiant` par votre propre numéro.
 
 <br>
 
@@ -37,7 +37,7 @@ Une fois R et R studio installés, voici la première partie du contrôle contin
 
 <br>
 
-- Importez le tableau `Pan_Rui_2017_flowering_time_raw_data.txt` en utilisant la bonne fonction et gardez le dans un l'objet `flowering_data`. 
+- Importez le tableau `Pan_Rui_2017_flowering_time_raw_data.txt` en utilisant la bonne fonction et gardez le dans l'objet `flowering_data`. 
 
 *Aide: le fichier est au format `.txt` avec les colonnes séparées par une tabulation.*
 
