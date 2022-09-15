@@ -1,0 +1,35 @@
+---
+title: "Devoir séance 4"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+[Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
+
+<br>
+
+Ceci est le début de la deuxième moitié du contrôle continu qui sera à déposer sur Moodle au plus tard le 26/11/2022 à minuit. Cette partie correspondant à la séance 4 du contrôle continu qui combinera les exercices à faire entre les séances. Pour cela:
+
+
+- Créez un nouveau script R que vous sauvez immediatement sous le nom de `Script_controle_continu2_numéro_étudiant.R` en remplaçant `numéro_étudiant` par votre propre numéro.
+
+<br>
+
+- Chargez le package `tidyverse`(en utilisant `library()`)
+
+<br>
+
+- Définissez votre répertoire de travail dans le dossier `session1_organisations`  (en utilisant `setwd()`)
+
+<br>
+
+- Importez le tableau `Pan_Rui_2017_flowering_time_raw_data.txt` en utilisant la bonne fonction et gardez le dans l'objet `flowering_data`. 
+
+
+- Mutate ou unite, filter + graph (utiliser pipes)
+
+

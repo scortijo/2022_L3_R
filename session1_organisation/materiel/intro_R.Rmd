@@ -302,21 +302,25 @@ _Note:_ Il existe aussi une fonction `read.csv()`, qui est la fonction par défa
 > **Conseil:** 
 > Si besoin consultez la page d'aide des fonctions en utilisant `?` (par exemple `?library()` pour consulter la page d'aide de la fonction `library()`)
 
+<br>
 
 # Ressources et liens utiles
 
 - [Les fonctions pour importer les différents formats dans R](http://readr.tidyverse.org/)
 
+<br>
 
 ******
   
 #   <span style="color: blue;">A faire pour la prochaine séance </span>
 
-A partir de ce que nous avons vu aujourd'hui:
+#### A partir de ce que nous avons vu aujourd'hui:
 
-- Installez R et Rstudio sur votre ordinateur ([Installer R](https://cran.biotools.fr/), [Installer Rstudio](https://rstudio.com/products/rstudio/download/))
+#### - Installez R et Rstudio sur votre ordinateur ([Installer R](https://cran.biotools.fr/), [Installer Rstudio](https://rstudio.com/products/rstudio/download/))
 
-- Commencez le contrôle continu dont les instructions sont [ici](Devoir_seance1.html)
+#### - Commencez le contrôle continu dont les instructions sont [ici](Devoir_seance1.html)
+
+<br>
 
 ******
 
