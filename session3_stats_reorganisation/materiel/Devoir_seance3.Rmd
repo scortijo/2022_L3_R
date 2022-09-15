@@ -28,8 +28,9 @@ Ceci est la partie correspondant à la séance 3 du contrôle continu qui combin
 
 <br>
 
-- Ajoutez au boxplot (qui est à la fin de votre script) le résultat d'un test de comparaison de moyennes entre les deux niveaux d'azote pour chacune des accessions. 
-*Aide: pour faciliter la lecture du résultat du test, utiliez `label = "p.signif"` afin de ne faire apparaitre que les étoiles de significativité du test pour chaque accession.* 
+- Ajoutez au boxplot (qui est à la fin de votre script) le résultat d'un test de comparaison de moyennes entre les deux niveaux d'azote pour chacune des accessions.    
+*Aide: pour faciliter la lecture du résultat du test, utiliez `label = "p.signif"` afin de ne faire apparaitre que les étoiles de significativité du test pour chaque accession.*   
+
 Formulez une interprétation à propos de l'effet du la concentration en azote sur le poids des plantes d'Arabidopsis.
 
 <br>
