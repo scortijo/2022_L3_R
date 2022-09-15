@@ -586,11 +586,19 @@ Nous pouvons aussi ordonner les génotypes en fonction de `days.to.bolt`. Pour c
 
 ******
   
-#  <span style="color: blue;">A faire pour la prochaine séance </span>
+#  <span style="color: blue;">Contrôle continu à faire pour la prochaine séance </span>
 
-La semaine prochaine nous allons faire un examen blanc, vous demandant d'explorer un jeu de donnée. Il s'agira d'une mise en pratique des fonctions que nous avons vu jusqu'ici. Vous devrez écrire l'ensemble dans un format Rmarkdown.
+#### A partir ce ce que nous avons vu aujourd'hui:
 
-**Afin de vous y préparer, nous vous recommandons de reprendre l'ensemble des cours et de vous exercer à refaire les exercices (sans avoir recours aux solutions si possible). Le tout en format Rmarkdown**
+#### - Finissez la deuxième moitié du contrôle continu dont les instructions sont [ici](Devoir_seance4.html)
+
+#### - Déposez avant le 26/11/2022 à minuit sur Moodle le script R de la deuxième moitié du contrôle continu résultant des instructions à la fin des séances 4 et 5.
+
+<br>
+
+La semaine prochaine nous allons faire un examen blanc, vous demandant d'explorer un jeu de donnée. Il s'agira d'une mise en pratique des fonctions que nous avons vu jusqu'ici. 
+
+**Afin de vous y préparer, nous vous recommandons de reprendre l'ensemble des cours et de vous exercer à refaire les exercices (sans avoir recours aux solutions si possible).**
 
 Lors de l'examen blanc (et de l'examen final) vous aurez accès au cours et à vos scripts. Vous allez être évalué sur votre capacité à utiliser les différentes fonctions et à comprendre leur utilité, et non sur de la connaissance pure.
 

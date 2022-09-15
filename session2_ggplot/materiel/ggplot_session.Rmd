@@ -583,7 +583,7 @@ pour faire des graphiques "ridge"
 ******
 
   
-#   <span style="color: blue;">A faire pour la prochaine séance </span>
+#   <span style="color: blue;">Contrôle continu à faire pour la prochaine séance </span>
 
 #### A partir ce ce que nous avons vu aujourd'hui:
 

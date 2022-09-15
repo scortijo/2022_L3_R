@@ -312,7 +312,7 @@ _Note:_ Il existe aussi une fonction `read.csv()`, qui est la fonction par défa
 
 ******
   
-#   <span style="color: blue;">A faire pour la prochaine séance </span>
+#   <span style="color: blue;"> Contrôle continu à faire pour la prochaine séance </span>
 
 #### A partir de ce que nous avons vu aujourd'hui:
 
