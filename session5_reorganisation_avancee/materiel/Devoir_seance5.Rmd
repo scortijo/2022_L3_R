@@ -1,0 +1,33 @@
+---
+title: "Devoir séance 5"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+[Retour à la page d'accueil](https://scortijo.github.io/2022_L3_R/)
+
+<br>
+
+Ceci est la fin de la deuxième moitié du contrôle continu qui sera à déposer sur Moodle au plus tard le 26/11/2022 à minuit. Cette partie correspondant à la séance 4 du contrôle continu qui combinera les exercices à faire entre les séances. Pour cela:
+
+- Indiquez le nombre d'observation pour chaque accession en fonction du traitement en azote (`Nlevel`) à un boxplot de la `NUE` en fonction de l'accession, et ce uniquement pour le répliqua 1 et les plantes traitées avec une forte concentration en azote.
+
+*Les différentes étapes à suivre pour cela:*   
+1. *Sauvez dans l'objet `NUE_data` un tableau où vous avez calculé la NUE,  selectionné le répliquat 1 et selectionné les plantes pour lesquelles `Nlevel` est H (high).*   
+2. *En utilisant des pipes ( %>% ) pour les opérations suivantes:*   
+3. *A partir de l'objet `NUE_data`, calculez le nombre d'observation pour chaque accession. Pour cela utilisez la combinaison des fonctions `group_by` et `summarise`*   
+4. *Utilisez une des fonction de type `join` pour combiner le tableau que vous venez de créer avec `NUE_data`.*   
+5. *Effectuez un boxplot de la `NUE` en fonction de l'accession.*   
+6. *Ajoutez à ce boxplot du texte indiquant le nombre d'observation pour chaque accession.*   
+
+
+<br>
+
+- **C'est fini. N'oubliez pas de sauver votre fichier. Le script contenant tous les exercices à faire pour les séances 4 et 5 est la deuxième moitié du contrôle continu et doit être déposé sur Moodle au plus tard le 26/11/2022 à minuit.**
+
+<br>
+

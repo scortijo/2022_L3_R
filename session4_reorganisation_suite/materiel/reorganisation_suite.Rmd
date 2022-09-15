@@ -285,7 +285,7 @@ colnames(expt1.separated)
 
 #### A partir ce ce que nous avons vu aujourd'hui:
 
-#### - Commenxez la deuxième moitié du contrôle continu dont les instructions sont [ici](Devoir_seance4.html)
+#### - Commencez la deuxième moitié du contrôle continu dont les instructions sont [ici](Devoir_seance4.html)
 
 
 ******
