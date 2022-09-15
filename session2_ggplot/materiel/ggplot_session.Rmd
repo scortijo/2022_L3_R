@@ -578,15 +578,18 @@ pour faire des graphiques "ridge"
 - [Antisèche pour ggplot2](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf)
 
 
-
+<br>
 
 ******
+
   
 #   <span style="color: blue;">A faire pour la prochaine séance </span>
 
-A partir ce ce que nous avons vu aujourd'hui:
+#### A partir ce ce que nous avons vu aujourd'hui:
 
-- Continuez le contrôle continu dont les instructions sont [ici](Devoir_seance2.html)
+#### - Continuez le contrôle continu dont les instructions sont [ici](Devoir_seance2.html)
+
+<br> 
 
 ******
 

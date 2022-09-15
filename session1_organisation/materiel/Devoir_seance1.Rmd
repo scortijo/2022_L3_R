@@ -37,18 +37,18 @@ Une fois R et R studio installés, voici la première partie du contrôle contin
 
 <br>
 
-- Importez le tableau `Pan_Rui_2017_flowering_time_raw_data.txt` en utilisant la bonne fonction et gardez le dans l'objet `flowering_data`. 
+- Importez le tableau `Cheng_2021_Arabidopsis_N.txt` en utilisant la bonne fonction et gardez le dans l'objet `nitrate_data`. 
 
 *Aide: le fichier est au format `.txt` avec les colonnes séparées par une tabulation.*
 
 <br>
 
-Vous pouvez trouver plus d'information sur le jeu de données dans cet article de [Pan et al., 2017](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0189791).
-Dans le fichier la colonne `Genotype` contient le nom des accessions d'Arabidopsis utilisées. La colonne `Treatment` indique si les plantes ont été traitées avec le champignon *Piriformospora indica*. La colonne `Flowering_time_days` indique le nombre de jours pour que les plantes arrivent à floraison. Quinze plantes ont été mesurées pour chaque traitement sur chaque génotype.
+Vous pouvez trouver plus d'information sur le jeu de données dans cet article de [Cheng et al., 2021](https://www.nature.com/articles/s41467-021-25893-w#MOESM4).
+Dans le fichier la colonne `Accession` contient le nom des accessions d'Arabidopsis utilisées. La colonne `Nlevel` indique si les plantes ont été traitées avec une faible ou forte concentration en azote. La concentration exacte d'azote utilisée (en mg) est indiquée dans la colonne `AppliedN_mg`. La colonne `DryWeight_g` indique le poids des plantes séchées à la fin de l'expérience. Trois répliquas ont été effectués pour chaque traitement sur chaque accession
 
 <br>
 
-- C'est fini. N'oubliez pas de sauver votre fichier que vous réutiliserez pour le reste du contrôle continu.
+- **C'est fini. N'oubliez pas de sauver votre fichier que vous réutiliserez pour le reste du contrôle continu.**
 
 <br>
 

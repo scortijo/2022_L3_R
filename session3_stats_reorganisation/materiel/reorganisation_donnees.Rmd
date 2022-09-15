@@ -210,11 +210,11 @@ write_tsv(expt1.days.to.flower.clean, file = "../data/expt1_days_to_flower_clean
   
 #   <span style="color: blue;">A faire pour la prochaine séance </span>
 
-A partir ce ce que nous avons vu aujourd'hui:
+#### A partir ce ce que nous avons vu aujourd'hui:
 
-- Finissez le contrôle continu dont les instructions sont [ici](Devoir_seance3.html)
+#### - Finissez le contrôle continu dont les instructions sont [ici](Devoir_seance3.html)
 
-- Déposez avant le xxx sur Moodle le script R de la première moitié du contrôle continu résultats des instructions à la fin des séances 1, 2 et 3.
+#### - Déposez avant le 09/11/2022 à minuit sur Moodle le script R de la première moitié du contrôle continu résultant des instructions à la fin des séances 1, 2 et 3.
 
 
 ******

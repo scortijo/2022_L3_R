@@ -28,18 +28,18 @@ Ceci est la partie correspondant à la séance 2 du contrôle continu qui combin
 
 <br>
 
-- En utilisant une ou plusieurs fonctions vues lors de la deuxième séance, déterminez le nombre de lignes et de colonnes de votre objet `flowering_data` contenant les données du tableau `Pan_Rui_2017_flowering_time_raw_data.txt`. 
+- En utilisant une ou plusieurs fonctions vues lors de la deuxième séance, déterminez le nombre de lignes et de colonnes de votre objet `nitrate_data` contenant les données du tableau `Cheng_2021_Arabidopsis_N.txt`. 
 
 
 <br>
 
 
-- Effectuez un boxplot du temps de `Flowering_time_days` (axe y), en fonction du `Genotype` (axe x), avec l'intérieur des boxplots colorés en fonction de `Treatment`
+- Effectuez un boxplot du poids des plantes (`DryWeight_g`, axe y), en fonction de l'`Accession` (axe x), avec l'intérieur des boxplot colorés en fonction de du type de traitement d'azote (Nlevel`).  
 
 
 <br>
 
-- C'est fini. N'oubliez pas de sauver votre fichier que vous réutiliserez pour le reste du contrôle continu.
+- **C'est fini. N'oubliez pas de sauver votre fichier que vous réutiliserez pour le reste du contrôle continu.**
 
 <br>
 

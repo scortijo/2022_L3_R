@@ -23,13 +23,27 @@ Ceci est le début de la deuxième moitié du contrôle continu qui sera à dép
 
 <br>
 
-- Définissez votre répertoire de travail dans le dossier `session1_organisations`  (en utilisant `setwd()`)
+- Définissez votre répertoire de travail dans le dossier `session4_organisations`  (en utilisant `setwd()`)
 
 <br>
 
-- Importez le tableau `Pan_Rui_2017_flowering_time_raw_data.txt` en utilisant la bonne fonction et gardez le dans l'objet `flowering_data`. 
+- Importez le tableau `Cheng_2021_Arabidopsis_N.txt` en utilisant la bonne fonction et gardez le dans l'objet `nitrate_data`. 
+
+<br>
 
 
-- Mutate ou unite, filter + graph (utiliser pipes)
+- En utilisant `%>%` afin de ne pas créer d'objet intermédiaire, effectuez la suite d'opérations suivantes:
+1. Créez la colonne `AppliedN_g`, à partir de la colonne `AppliedN_mg` qui contient, en grammes (au lieu de milligrammes) la quantité d'azote utilisée dans le traitement.
+2. Créez la colonne `NUE` qui contient la valeur d'efficacité d'utilisation d'azote qui est mesurée avec la formule suivante:         
+*Poids sec des plantes (en gramme) / quantité d'azote utilisée dans le traitement (en gramme)*
+3. Selectionnez les lignes correspondant au premier répliqua
+4. Effectuez un boxplot de la `NUE` en fonction de l'accession, avec l'intérieur des boxplots colorés en fonction de la quantité d'azote utilisée dans le traitement (`Nlevel`).
+
+Formulez une interprétation à propos de l'effet du la concentration en azote sur l'efficacité d'utilisation d'azote des plantes d'Arabidopsis. 
+
+
+<br>
+
+- **C'est fini. N'oubliez pas de sauver votre fichier que vous réutiliserez pour le reste du contrôle continu.**
 
 
