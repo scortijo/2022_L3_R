@@ -1,6 +1,6 @@
-**Où:** xxx
+**Où:** Salles 36.209 et 5.125
 
-**Quand:** Du xxx 2022 au xxx 2022
+**Quand:** Du 13 octobre 2022 au 01 décembre 2022
 
 **Instructeurs:** 
 [Sandra Cortijo](mailto:sandra.cortijo@cnrs.fr), 
@@ -18,7 +18,7 @@ Afin de pouvoir faire ce cours sur votre ordinateur, téléchargez le matériel 
 Les différentes séances sont (avec accès au cours):
 
 
-### Séance 1 (xxx): Organisation des données et intro à **R**
+### Séance 1 (13/10/2022 8h-11h15, salle 36.209): Organisation des données et intro à **R**
 
 [Matériel organisation des données](session1_organisation/materiel/organisation_session.html)  
 
@@ -32,7 +32,7 @@ Les différentes séances sont (avec accès au cours):
 
 <br>
 
-### Séance 2 (xxx): Réaliser des graphiques
+### Séance 2 (20/10/2022 8h-11h15, salle 36.209): Réaliser des graphiques
 
 [Matériel réaliser des graphiques](session2_ggplot/materiel/ggplot_session.html)  
 
@@ -41,7 +41,7 @@ Les différentes séances sont (avec accès au cours):
 
 <br>
 
-### Séance 3 (xxx): Ajouter des résultats de tests statistiques à des graphiques et réorganiser des données
+### Séance 3 (27.10/2022 8h-11h15, salle 36.209): Ajouter des résultats de tests statistiques à des graphiques et réorganiser des données
 
 [Partie 1 - Matériel ajouter des résultats de tests statistiques à des graphiques](session3_stats_reorganisation/materiel/statistiques.html)  
 
@@ -55,7 +55,7 @@ Les différentes séances sont (avec accès au cours):
 
 <br>
 
-### Séance 4 (18/11/2021 8h-11h15): Réorganisation de données - suite
+### Séance 4 (10/11/2022 8h-11h15, salle 5.125): Réorganisation de données - suite
 
 [Matériel réorganisation de données - suite](session4_reorganisation_suite/materiel/reorganisation_suite.html)  
 
@@ -64,7 +64,7 @@ Les différentes séances sont (avec accès au cours):
 
 <br>
 
-### Séance 5 (25/11/2021 8h-11h15): Réorganisation avancée de données
+### Séance 5 (17/11/2022 8h-11h15, salle 5.125): Réorganisation avancée de données
 
 
 [Matériel réorganisation de données avancée](session5_reorganisation_avancee/materiel/reorganisation_avancee.html) 
@@ -73,12 +73,12 @@ Les différentes séances sont (avec accès au cours):
 
 <br>
 
-### Séance 6 (xxx): Exam blanc, Correction de l'exam blanc et trucs et astuces
+### Séance 6 (27/11/2022 8h-11h15, salle 5.125): Exam blanc, Correction de l'exam blanc et trucs et astuces
 
 
 <br>
 
-### Séance 7 (xxx): Exam
+### Séance 7 (01/12/2022 9h45-11h15, salle 5.125): Exam
 
 
 <br>
@@ -103,7 +103,7 @@ Les différentes séances sont (avec accès au cours):
 
 **L'évaluation de cette matière va comporter:**
 
-**1. Un contrôle continu qui combine les exercices à faire entre les séances sur votre ordinateur personnel. Une première moitié du contrôle continu sera à rendre le xxx. La deuxième moitié sera à rendre le xxx.**
+**1. Un contrôle continu qui combine les exercices à faire entre les séances sur votre ordinateur personnel. Une première moitié du contrôle continu sera à rendre au plus tard le 09/11/2022 à minuit. La deuxième moitié sera à rendre au plus tard le 26/11/2022 à minuit.**
 
 **2. Un devoir en classe lors de la dernière séance**
 
