@@ -296,7 +296,7 @@ _Note:_ Il existe aussi une fonction `read.csv()`, qui est la fonction par défa
 > 
 > - Charge le package `tidyverse` (en utilisant `library()`)
 > - Défini votre répertoire de travail dans le dossier `session1_organisations`  (en utilisant `setwd()`)
-> - Importe le fichier _dataset_tidy_all.txt_ qui est dans le dossier _data_ (en utilisant `read_csv()`)
+> - Importe le fichier _dataset_tidy_all.txt_ qui est dans le dossier _data_ (en utilisant `read_tsv()`)
 > 
 >
 > **Conseil:** 
