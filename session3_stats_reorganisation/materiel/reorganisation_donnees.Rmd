@@ -214,7 +214,7 @@ write_tsv(expt1.days.to.flower.clean, file = "../data/expt1_days_to_flower_clean
 
 #### - Finissez la première moitié du contrôle continu dont les instructions sont [ici](Devoir_seance3.html)
 
-#### - Déposez avant le 09/11/2022 à minuit sur Moodle le script R de la première moitié du contrôle continu résultant des instructions à la fin des séances 1, 2 et 3.
+#### - Déposez avant le 16/11/2022 à minuit sur Moodle le script R de la première moitié du contrôle continu résultant des instructions à la fin des séances 1, 2 et 3.
 
 
 ******

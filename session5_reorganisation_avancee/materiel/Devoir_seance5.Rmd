@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br>
 
-Ceci est la fin de la deuxième moitié du contrôle continu qui sera à déposer sur Moodle au plus tard le 26/11/2022 à minuit. Cette partie correspondant à la séance 4 du contrôle continu qui combinera les exercices à faire entre les séances. Pour cela:
+Ceci est la fin de la deuxième moitié du contrôle continu qui sera à déposer sur Moodle au plus tard le 10/12/2022 à minuit. Cette partie correspondant à la séance 5 du contrôle continu qui combinera les exercices à faire entre les séances. Pour cela:
 
 - Indiquez le nombre d'observation pour chaque accession en fonction du traitement en azote (`Nlevel`) à un boxplot de la `NUE` en fonction de l'accession, et ce uniquement pour le répliqua 1 et les plantes traitées avec une forte concentration en azote.
 
@@ -27,7 +27,7 @@ Ceci est la fin de la deuxième moitié du contrôle continu qui sera à dépose
 
 <br>
 
-- **C'est fini. N'oubliez pas de sauver votre fichier. Le script contenant tous les exercices à faire pour les séances 4 et 5 est la deuxième moitié du contrôle continu et doit être déposé sur Moodle au plus tard le 26/11/2022 à minuit.**
+- **C'est fini. N'oubliez pas de sauver votre fichier. Le script contenant tous les exercices à faire pour les séances 4 et 5 est la deuxième moitié du contrôle continu et doit être déposé sur Moodle au plus tard le 10/12/2022 à minuit.**
 
 <br>
 

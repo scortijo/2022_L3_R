@@ -592,7 +592,7 @@ Nous pouvons aussi ordonner les génotypes en fonction de `days.to.bolt`. Pour c
 
 #### - Finissez la deuxième moitié du contrôle continu dont les instructions sont [ici](Devoir_seance5.html)
 
-#### - Déposez avant le 26/11/2022 à minuit sur Moodle le script R de la deuxième moitié du contrôle continu résultant des instructions à la fin des séances 4 et 5.
+#### - Déposez avant le 10/12/2022 à minuit sur Moodle le script R de la deuxième moitié du contrôle continu résultant des instructions à la fin des séances 4 et 5.
 
 <br>
 

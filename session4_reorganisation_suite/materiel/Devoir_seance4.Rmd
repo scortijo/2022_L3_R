@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br>
 
-Ceci est le début de la deuxième moitié du contrôle continu qui sera à déposer sur Moodle au plus tard le 26/11/2022 à minuit. Cette partie correspondant à la séance 4 du contrôle continu qui combinera les exercices à faire entre les séances. Pour cela:
+Ceci est le début de la deuxième moitié du contrôle continu qui sera à déposer sur Moodle au plus tard le 10/12/2022 à minuit. Cette partie correspondant à la séance 4 du contrôle continu qui combinera les exercices à faire entre les séances. Pour cela:
 
 
 - Créez un nouveau script R que vous sauvez immediatement sous le nom de `Script_controle_continu2_numéro_étudiant.R` en remplaçant `numéro_étudiant` par votre propre numéro.
