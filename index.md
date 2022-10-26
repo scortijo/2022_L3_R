@@ -1,6 +1,6 @@
 **Où:** Salles 36.209 et 5.125
 
-**Quand:** Du 13 octobre 2022 au 01 décembre 2022
+**Quand:** Du 13 octobre 2022 au 15 décembre 2022
 
 **Instructeurs:** 
 [Sandra Cortijo](mailto:sandra.cortijo@cnrs.fr), 
