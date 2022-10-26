@@ -32,7 +32,7 @@ Les différentes séances sont (avec accès au cours):
 
 <br>
 
-### Séance 2 (20/10/2022 8h-11h15, salle 36.209): Réaliser des graphiques
+### Séance 2 (27/10/2022 8h-11h15, salle 36.209): Réaliser des graphiques
 
 [Matériel réaliser des graphiques](session2_ggplot/materiel/ggplot_session.html)  
 
@@ -41,7 +41,7 @@ Les différentes séances sont (avec accès au cours):
 
 <br>
 
-### Séance 3 (27.10/2022 8h-11h15, salle 36.209): Ajouter des résultats de tests statistiques à des graphiques et réorganiser des données
+### Séance 3 (10/11/2022 8h-11h15, salle 5.125): Ajouter des résultats de tests statistiques à des graphiques et réorganiser des données
 
 [Partie 1 - Matériel ajouter des résultats de tests statistiques à des graphiques](session3_stats_reorganisation/materiel/statistiques.html)  
 
@@ -55,7 +55,7 @@ Les différentes séances sont (avec accès au cours):
 
 <br>
 
-### Séance 4 (10/11/2022 8h-11h15, salle 5.125): Réorganisation de données - suite
+### Séance 4 (17/11/2022 8h-11h15, salle 5.125): Réorganisation de données - suite
 
 [Matériel réorganisation de données - suite](session4_reorganisation_suite/materiel/reorganisation_suite.html)  
 
@@ -64,7 +64,7 @@ Les différentes séances sont (avec accès au cours):
 
 <br>
 
-### Séance 5 (17/11/2022 8h-11h15, salle 5.125): Réorganisation avancée de données
+### Séance 5 (24/11/2022 8h-11h15, salle 5.125): Réorganisation avancée de données
 
 
 [Matériel réorganisation de données avancée](session5_reorganisation_avancee/materiel/reorganisation_avancee.html) 
@@ -73,12 +73,12 @@ Les différentes séances sont (avec accès au cours):
 
 <br>
 
-### Séance 6 (27/11/2022 8h-11h15, salle 5.125): Exam blanc, Correction de l'exam blanc et trucs et astuces
+### Séance 6 (01/12/2022 8h-11h15, salle 5.125): Exam blanc, Correction de l'exam blanc et trucs et astuces
 
 
 <br>
 
-### Séance 7 (01/12/2022 9h45-11h15, salle 5.125): Exam
+### Séance 7 (15/12/2022 9h45-11h15, salle 5.125): Exam
 
 
 <br>
@@ -103,7 +103,7 @@ Les différentes séances sont (avec accès au cours):
 
 **L'évaluation de cette matière va comporter:**
 
-**1. Un contrôle continu qui combine les exercices à faire entre les séances sur votre ordinateur personnel. Une première moitié du contrôle continu sera à déposer sur Moodle au plus tard le 09/11/2022 à minuit. La deuxième moitié sera à déposer sur Moodle au plus tard le 26/11/2022 à minuit.**
+**1. Un contrôle continu qui combine les exercices à faire entre les séances sur votre ordinateur personnel. Une première moitié du contrôle continu sera à déposer sur Moodle au plus tard le 09/11/2022 à minuit. La deuxième moitié sera à déposer sur Moodle au plus tard le 30/11/2022 à minuit.**
 
 **2. Un devoir en classe lors de la dernière séance**
 
