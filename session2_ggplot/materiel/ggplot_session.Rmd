@@ -455,7 +455,7 @@ Parfois nous voulons crée une figure contenant plusieurs graphiques, c'est le c
 
 Par exemple le graphique que vous avez reproduit hier correspond aux panels B et C d'une figure de [Burghard et al 2015](https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.13799)
 
-![](https://nph.onlinelibrary.wiley.com/cms/asset/73c17ba2-4706-41b2-8dfd-cbe3ac8405dd/nph13799-fig-0002-m.jpg){width=60%}
+![](Figure_panels_ABC.png){width=60%}
 
 
 Nous allons faire quelque chose de similaire avec un scatterplot en panel A, et des boxplots en panel B.
