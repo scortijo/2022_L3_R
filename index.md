@@ -105,6 +105,10 @@ Les différentes séances sont (avec accès au cours):
 
 **1. Un contrôle continu qui combine les exercices à faire entre les séances sur votre ordinateur personnel. Une première moitié du contrôle continu sera à déposer sur Moodle au plus tard le 16/11/2022 à minuit. La deuxième moitié sera à déposer sur Moodle au plus tard le 10/12/2022 à minuit.**
 
+
+[Solution de la première moitié du contôle continu](correction_DM1_2_3.html)
+
+
 **2. Un devoir en classe lors de la dernière séance**
 
 <br>
