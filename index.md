@@ -75,8 +75,11 @@ Les différentes séances sont (avec accès au cours):
 
 ### Séance 6 (01/12/2022 8h-11h15, salle 5.125): Exam blanc, Correction de l'exam blanc et trucs et astuces
 
+L'exam blanc, ainsi que [la solution](session6_exam_blanc/Solution_Exam_blanc.html) sont dans le dossier *session6_exam_blanc*
 
 <br>
+
+L'exam blanc de 2021, ainsi que [la solution](exam_blanc_2021/solution_exam_blanc_2021.html) sont aussi disponibles dans le dossier *exam_blanc_2021*
 
 ### Séance 7 (15/12/2022 9h45-11h15, salle 5.125): Exam
 
