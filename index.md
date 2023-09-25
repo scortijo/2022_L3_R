@@ -1,6 +1,6 @@
-**Où:** Salles 36.209 et 5.125
+**Où:** Salle TD5.129 
 
-**Quand:** Du 13 octobre 2022 au 15 décembre 2022
+**Quand:** Du 12 octobre 2023 au 7 décembre 2023
 
 **Instructeurs:** 
 [Sandra Cortijo](mailto:sandra.cortijo@cnrs.fr), 
@@ -18,7 +18,7 @@ Afin de pouvoir faire ce cours sur votre ordinateur, téléchargez le matériel 
 Les différentes séances sont (avec accès au cours):
 
 
-### Séance 1 (13/10/2022 8h-11h15, salle 36.209): Organisation des données et intro à **R**
+### Séance 1 (12/10/2023 13h15-16h30, salle TD5.129): Organisation des données et intro à **R**
 
 [Matériel organisation des données](session1_organisation/materiel/organisation_session.html)  
 
@@ -32,7 +32,7 @@ Les différentes séances sont (avec accès au cours):
 
 <br>
 
-### Séance 2 (27/10/2022 8h-11h15, salle 36.209): Réaliser des graphiques
+### Séance 2 (19/10/2023 13h15-16h30, salle TD5.129): Réaliser des graphiques
 
 [Matériel réaliser des graphiques](session2_ggplot/materiel/ggplot_session.html)  
 
@@ -41,7 +41,7 @@ Les différentes séances sont (avec accès au cours):
 
 <br>
 
-### Séance 3 (10/11/2022 8h-11h15, salle 5.125): Ajouter des résultats de tests statistiques à des graphiques et réorganiser des données
+### Séance 3 (26/10/2023 13h15-16h30, salle TD5.129): Ajouter des résultats de tests statistiques à des graphiques et réorganiser des données
 
 [Partie 1 - Matériel ajouter des résultats de tests statistiques à des graphiques](session3_stats_reorganisation/materiel/statistiques.html)  
 
@@ -55,7 +55,7 @@ Les différentes séances sont (avec accès au cours):
 
 <br>
 
-### Séance 4 (17/11/2022 8h-11h15, salle 5.125): Réorganisation de données - suite
+### Séance 4 (8/11/2023 13h15-16h30, salle TD5.129): Réorganisation de données - suite
 
 [Matériel réorganisation de données - suite](session4_reorganisation_suite/materiel/reorganisation_suite.html)  
 
@@ -64,7 +64,7 @@ Les différentes séances sont (avec accès au cours):
 
 <br>
 
-### Séance 5 (24/11/2022 8h-11h15, salle 5.125): Réorganisation avancée de données
+### Séance 5 (13/11/2023 13h15-16h30, salle TD5.129): Réorganisation avancée de données
 
 
 [Matériel réorganisation de données avancée](session5_reorganisation_avancee/materiel/reorganisation_avancee.html) 
@@ -73,15 +73,10 @@ Les différentes séances sont (avec accès au cours):
 
 <br>
 
-### Séance 6 (01/12/2022 8h-11h15, salle 5.125): Exam blanc, Correction de l'exam blanc et trucs et astuces
+### Séance 6 (20/11/2023 13h15-16h30, salle TD5.129): Exam blanc, Correction de l'exam blanc et trucs et astuces
 
-L'exam blanc, ainsi que [la solution](session6_exam_blanc/Solution_Exam_blanc.html) sont dans le dossier *session6_exam_blanc*
 
-<br>
-
-L'exam blanc de 2021, ainsi que [la solution](exam_blanc_2021/solution_exam_blanc_2021.html) sont aussi disponibles dans le dossier *exam_blanc_2021*
-
-### Séance 7 (15/12/2022 9h45-11h15, salle 5.125): Exam
+### Séance 7 (7/12/2023 9h45-11h15, salle TD5.129): Exam
 
 
 <br>
@@ -106,10 +101,8 @@ L'exam blanc de 2021, ainsi que [la solution](exam_blanc_2021/solution_exam_blan
 
 **L'évaluation de cette matière va comporter:**
 
-**1. Un contrôle continu qui combine les exercices à faire entre les séances sur votre ordinateur personnel. Une première moitié du contrôle continu sera à déposer sur Moodle au plus tard le 16/11/2022 à minuit. La deuxième moitié sera à déposer sur Moodle au plus tard le 10/12/2022 à minuit.**
+**1. Un contrôle continu qui combine les exercices à faire entre les séances sur votre ordinateur personnel. Une première moitié du contrôle continu sera à déposer sur Moodle au plus tard le 7/11/2023 à minuit. La deuxième moitié sera à déposer sur Moodle au plus tard le 26/11/2023 à minuit.**
 
-
-[Solution de la première moitié du contôle continu](correction_DM1_2_3.html)
 
 
 **2. Un devoir en classe lors de la dernière séance**
